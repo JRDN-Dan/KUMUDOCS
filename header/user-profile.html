@@ -81,7 +81,7 @@
     <nav class="flex justify-between items-center w-full px-4 md:px-12 py-4 mx-auto">
         
         <div class="flex items-center gap-3">
-            <img src="./KUMUDOCS.png" alt="KUMUDOCS Logo" class="h-8 w-auto object-contain"/>
+            <img src="../KUMUDOCS.png" alt="KUMUDOCS Logo" class="h-8 w-auto object-contain"/>
             <div class="text-[18px] font-black text-primary dark:text-inverse-primary uppercase tracking-tighter">
                 KUMUDOCS
             </div>
@@ -89,9 +89,9 @@
 
         <div class="flex items-center gap-6">
             <div class="hidden md:flex ml-8 items-center gap-8">
-                <a class="text-[14px] text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors" href="./header/user-profile.html">Profile</a>
-                <a class="text-[14px] text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors" href="./header/help.html">Help</a>
-                <a class="text-[14px] text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors" href="./header/about.html">About</a>
+                <a class="text-[14px] text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors" href=".user-profile.html">Profile</a>
+                <a class="text-[14px] text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors" href=".help.html">Help</a>
+                <a class="text-[14px] text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors" href=".about.html">About</a>
             </div>
             <button id="logout-btn" class="text-[14px] text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors flex items-center gap-1">
                 <span>Logout</span>
@@ -114,7 +114,7 @@
 
         <!-- Profile Content -->
         <section class="md:col-span-9 flex flex-col gap-8">
-            <a class="flex items-center gap-2 text-primary hover:text-secondary transition-colors mb-2 group w-fit" href="./home-page.html">
+            <a class="flex items-center gap-2 text-primary hover:text-secondary transition-colors mb-2 group w-fit" href="../home-page.html">
                 <span class="material-symbols-outlined text-[20px] group-hover:-translate-x-1 transition-transform" data-icon="arrow_back">arrow_back</span>
                 <span class="text-[14px] font-bold uppercase tracking-wide">Back to Dashboard</span>
             </a>
@@ -230,7 +230,7 @@
 
         } else {
             // No user logged in, kick them back to login
-            window.location.href = "/log-in.html";
+            window.location.href = "../log-in.html";
         }
     });
 
@@ -239,7 +239,7 @@
         logoutBtn.addEventListener('click', async () => {
             try {
                 await signOut(auth);
-                window.location.href = "/log-in.html";
+                window.location.href = "../log-in.html";
             } catch (error) {
                 console.error("Logout Error:", error);
             }

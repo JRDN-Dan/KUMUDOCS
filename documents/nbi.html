@@ -111,7 +111,7 @@
         
         <!-- WRAPPED THE LOGO AND TITLE TOGETHER HERE -->
         <div class="flex items-center gap-3">
-            <img src="./KUMUDOCS.png" alt="KUMUDOCS Logo" class="h-8 w-auto object-contain"/>
+            <img src="../KUMUDOCS.png" alt="KUMUDOCS Logo" class="h-8 w-auto object-contain"/>
             <div class="text-title-sm font-title-sm font-black text-primary dark:text-inverse-primary uppercase tracking-tighter">
                 KUMUDOCS
             </div>
@@ -120,9 +120,9 @@
         <!-- RIGHT SIDE NAVIGATION LINKS -->
         <div class="flex items-center gap-6">
             <div class="hidden md:flex ml-8 items-center gap-8">
-                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="./header/user-profile.html">Profile</a>
-                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="./header/help.html">Help</a>
-                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="./header/about.html">About</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="../header/user-profile.html">Profile</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="../header/help.html">Help</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="../header/about.html">About</a>
             </div>
 <button id="logout-btn" class="text-label-sm font-label-sm text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors flex items-center gap-1">
     <span>Logout</span>
@@ -134,7 +134,7 @@
 <!-- Hero Section -->
 <div class="mb-12">
 <div class="flex items-center gap-2 text-primary mb-4">
-<a class="flex items-center text-primary hover:underline transition-all" href="./documents/docunav.html">
+<a class="flex items-center text-primary hover:underline transition-all" href=".docunav.html">
 <span class="material-symbols-outlined">arrow_back</span>
 <span class="text-label-sm font-label-sm font-bold uppercase tracking-wider">Back to Documents</span>
 </a>
@@ -311,7 +311,7 @@
             try {
                 await signOut(auth);
                 // After logging out, send them back to the login page
-                window.location.href = "/log-in.html"; 
+                window.location.href = "../log-in.html"; 
             } catch (error) {
                 console.error("Logout Error:", error);
                 alert("Failed to log out.");
