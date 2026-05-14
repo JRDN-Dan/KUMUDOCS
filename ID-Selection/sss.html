@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SSS ID Application Detail | KUMUDOCS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-fixed-dim": "#9fcaff",
+            "surface-container-low": "#f3f3fa",
+            "inverse-on-surface": "#f0f0f7",
+            "inverse-primary": "#abc7ff",
+            "surface-variant": "#e2e2e8",
+            "on-surface-variant": "#434751",
+            "error": "#ba1a1a",
+            "on-secondary": "#ffffff",
+            "on-primary": "#ffffff",
+            "surface-container-highest": "#e2e2e8",
+            "on-tertiary-fixed-variant": "#793105",
+            "primary-fixed-dim": "#abc7ff",
+            "outline-variant": "#c3c6d2",
+            "surface-dim": "#d9d9e0",
+            "surface-bright": "#f9f9ff",
+            "secondary-fixed": "#d2e4ff",
+            "on-primary-fixed": "#001b3f",
+            "on-surface": "#1a1c20",
+            "primary-container": "#004085",
+            "tertiary": "#4f1c00",
+            "on-tertiary-fixed": "#351000",
+            "on-secondary-container": "#004172",
+            "on-tertiary-container": "#f99463",
+            "on-error-container": "#93000a",
+            "surface": "#f9f9ff",
+            "surface-tint": "#305ea4",
+            "on-primary-container": "#84aefa",
+            "outline": "#737782",
+            "on-tertiary": "#ffffff",
+            "surface-container": "#ededf4",
+            "error-container": "#ffdad6",
+            "surface-container-high": "#e8e8ee",
+            "on-background": "#1a1c20",
+            "secondary": "#0061a5",
+            "background": "#f9f9ff",
+            "primary": "#002a5c",
+            "tertiary-fixed-dim": "#ffb694",
+            "secondary-container": "#66affe",
+            "inverse-surface": "#2f3035",
+            "tertiary-fixed": "#ffdbcc",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed-variant": "#00497e",
+            "on-secondary-fixed": "#001d37",
+            "on-error": "#ffffff",
+            "primary-fixed": "#d7e3ff",
+            "on-primary-fixed-variant": "#0c458b",
+            "tertiary-container": "#722c01"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "unit": "4px",
+            "margin-desktop": "48px",
+            "margin-mobile": "16px",
+            "container-max-width": "1200px",
+            "gutter": "24px"
+          },
+          "fontFamily": {
+            "label-sm": ["Public Sans"],
+            "display-lg-mobile": ["Public Sans"],
+            "body-md": ["Public Sans"],
+            "headline-md": ["Public Sans"],
+            "display-lg": ["Public Sans"],
+            "title-sm": ["Public Sans"]
+          },
+          "fontSize": {
+            "label-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+            "display-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+            "display-lg": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "title-sm": ["18px", {"lineHeight": "1.4", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Public Sans', sans-serif;
+      background-color: #f9f9ff;
+      background-image: radial-gradient(circle at 90% 10%, rgba(0, 42, 92, 0.03) 0%, transparent 40%),
+                        radial-gradient(circle at 10% 90%, rgba(0, 42, 92, 0.03) 0%, transparent 40%);
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .octopus-watermark {
+      position: fixed;
+      bottom: -100px;
+      left: -50px;
+      opacity: 0.03;
+      z-index: -1;
+      width: 600px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="text-on-surface">
+<!-- Watermark Element -->
+<img alt="" class="octopus-watermark" data-alt="A subtle, high-contrast digital illustration of an octopus with geometric, tech-inspired patterns on its tentacles. The style is minimalist and clean, rendered in a faint navy blue against a bright white background to serve as a sophisticated architectural watermark. The lighting is flat and ethereal, ensuring the illustration remains a background texture that does not interfere with content legibility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCkZv5_tp6MfFXS1O3QnYkEVpyoZyHGg768VRlHkrYgDcB3T5UUYZnOk6Yz-dl8Q9VyijsuEAx4z6Dn6K7UjCUWJbgp9J-WtVzo0a2OzkrL-i8Q3eLiBImSMUWW-si-HWo7DKsAZRgRqawel2efn6Kb3G0ibjdd7x10fEaOYgIOZQKtdQi8mmBpTcdfl_EMuuSPDkFNjtGp_xOp9nmiZ8-7opEB0juNUxCKKSqdFmiF0-r-jIf7oqm2Rknu_RlusBDOEgGv3Dlqcti"/>
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest dark:bg-surface-container-lowest border-b border-outline-variant dark:border-outline-variant docked full-width top-0 z-50">
+    <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-width mx-auto">
+        
+        <!-- WRAPPED THE LOGO AND TITLE TOGETHER HERE -->
+        <div class="flex items-center gap-3">
+            <img src="/KUMUDOCS.png" alt="KUMUDOCS Logo" class="h-8 w-auto object-contain"/>
+            <div class="text-title-sm font-title-sm font-black text-primary dark:text-inverse-primary uppercase tracking-tighter">
+                KUMUDOCS
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE NAVIGATION LINKS -->
+        <div class="flex items-center gap-6">
+            <div class="hidden md:flex ml-8 items-center gap-8">
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="/header/user-profile.html">Profile</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="/header/help.html">Help</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="/header/about.html">About</a>
+            </div>
+<button id="logout-btn" class="text-label-sm font-label-sm text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors flex items-center gap-1">
+    <span>Logout</span>
+</button>        </div>
+
+    </nav>
+</header>
+<main class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Breadcrumb -->
+<!-- Header Section -->
+ <div class="mb-12 border-l-4 border-primary pl-6">
+<a class="inline-flex items-center gap-2 text-label-sm font-semibold text-primary hover:text-secondary-container transition-colors mb-6 group" href="/ID-Selection/ID-selection.html">
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:-translate-x-1">arrow_back</span>
+        Back to Documents
+      </a>
+<h1 class="text-display-lg font-bold text-primary mb-2">SSS ID &amp; Number Application</h1>
+<p class="text-body-md text-on-surface-variant max-w-2xl">The Social Security System (SSS) provides a permanent identification number for all members. This guide outlines the institutional process for securing your SS Number and the subsequent UMID/SSS ID card.</p>
+
+</div>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Steps (8 Columns) -->
+<div class="lg:col-span-8 space-y-6">
+<div class="bg-surface-container-lowest border border-outline-variant p-8 shadow-[0_4px_20px_-4px_rgba(0,42,92,0.08)]">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary" data-icon="account_tree">account_tree</span>
+<h2 class="font-headline-md text-headline-md text-primary">Application Steps</h2>
+</div>
+<div class="space-y-0">
+<!-- Step 1 -->
+<div class="flex gap-6 pb-8 border-l-2 border-primary-fixed ml-4 pl-8 relative">
+<div class="absolute -left-[13px] top-0 w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold">1</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface mb-2">Create SSS online account</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Access the My.SSS portal to initiate your registration. This serves as your digital gateway for all future SSS transactions.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-6 pb-8 border-l-2 border-primary-fixed ml-4 pl-8 relative">
+<div class="absolute -left-[13px] top-0 w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold">2</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface mb-2">Apply for SS Number</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Complete the online application form with accurate personal details. Ensure your name matches your primary birth documents exactly.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-6 pb-8 border-l-2 border-primary-fixed ml-4 pl-8 relative">
+<div class="absolute -left-[13px] top-0 w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold">3</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface mb-2">Upload or submit requirements</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Digital copies of your PSA Birth Certificate and valid identification must be uploaded or presented at the nearest SSS branch.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex gap-6 pb-8 border-l-2 border-primary-fixed ml-4 pl-8 relative">
+<div class="absolute -left-[13px] top-0 w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold">4</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-surface mb-2">Receive SS Number</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Once verified, you will receive your permanent SS Number via email or through the online portal notification system.</p>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="flex gap-6 ml-4 pl-8 relative">
+<div class="absolute -left-[13px] top-0 w-6 h-6 rounded-full bg-surface-container-high text-on-surface-variant border border-outline-variant flex items-center justify-center text-xs font-bold">5</div>
+<div>
+<div class="flex items-center gap-2 mb-2">
+<h3 class="font-title-sm text-title-sm text-on-surface">Apply for UMID/SSS ID</h3>
+<span class="text-[10px] px-2 py-0.5 bg-surface-container-high rounded-full uppercase tracking-wider font-bold">Optional</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Members with at least one posted contribution may proceed to biometric capture for the Unified Multi-Purpose ID (UMID).</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Section (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<a class="group bg-primary p-6 flex flex-col justify-between min-h-[160px] hover:bg-primary-container transition-all" href="https://member.sss.gov.ph/member/pbl/register/exec" target="_blank">
+<span class="material-symbols-outlined text-white text-3xl mb-4" data-icon="language">language</span>
+<div>
+<p class="text-white font-bold font-title-sm">Visit SSS official website</p>
+<p class="text-primary-fixed-dim text-xs">Access the My.SSS Member Portal</p>
+</div>
+</a>
+<a class="group bg-surface-container-lowest border border-outline-variant p-6 flex flex-col justify-between min-h-[160px] hover:bg-surface-container-low transition-all" href="https://www.sss.gov.ph/wp-content/uploads/2024/10/E1-Personal-Record.pdf" target="_blank">
+<span class="material-symbols-outlined text-primary text-3xl mb-4" data-icon="description">description</span>
+<div>
+<p class="text-primary font-bold font-title-sm">Personal Record Form</p>
+<p class="text-on-surface-variant text-xs">Download the E-1 Application Form</p>
+</div>
+</a>
+</div>
+</div>
+<!-- Right Column: Requirements (4 Columns) -->
+<aside class="lg:col-span-4 space-y-6">
+<div class="bg-white border border-outline-variant p-6 shadow-sm">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-secondary" data-icon="fact_check">fact_check</span>
+<h2 class="font-title-sm text-title-sm text-on-surface">Mandatory Requirements</h2>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-lg mt-1" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-semibold">PSA Birth Certificate</p>
+<p class="text-xs text-on-surface-variant">Original or certified true copy from the Philippine Statistics Authority.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-lg mt-1" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-semibold">Valid ID</p>
+<p class="text-xs text-on-surface-variant">Passport, Driver's License, or PRC Card (if birth certificate is unavailable).</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-lg mt-1" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-semibold">SS Number application form</p>
+<p class="text-xs text-on-surface-variant">Duly accomplished Form E-1 or the online summary of registration.</p>
+</div>
+</li>
+</ul>
+<div class="mt-8 pt-6 border-t border-outline-variant">
+<div class="bg-surface-container-low p-4 rounded-lg border border-outline-variant/50">
+<div class="flex items-center gap-2 mb-2 text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="info">info</span>
+<span class="text-xs font-bold uppercase tracking-wider">Note</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                Ensure all scanned documents are clear and legible. Discrepancies between your ID and application form may result in processing delays.
+              </p>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-[1200px] mx-auto">
+<div class="mb-4 md:mb-0 text-center md:text-left">
+<div class="text-label-sm font-label-sm font-bold text-primary mb-2">KUMUDOCS</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant max-w-xs">© 2024 KUMUDOCS. All government trademarks belong to their respective agencies.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-label-sm font-label-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-label-sm font-label-sm" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+
+
+<script type="module">
+    // 1. Add 'signOut' to your existing auth imports
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+    // 2. Your existing config
+    const firebaseConfig = {
+        apiKey: "AIzaSyBGUmZNzSpDM7VgpXS8g78yJ_O10sGvklQ",
+        authDomain: "kumudocs.firebaseapp.com",
+        projectId: "kumudocs",
+        storageBucket: "kumudocs.firebasestorage.app",
+        messagingSenderId: "652105060147",
+        appId: "1:652105060147:web:715f7ec2a3760aad9fb846"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // 3. PASTE THE LOGOUT LOGIC HERE
+    const logoutBtn = document.getElementById('logout-btn');
+
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', async () => {
+            try {
+                await signOut(auth);
+                // After logging out, send them back to the login page
+                window.location.href = "/log-in.html"; 
+            } catch (error) {
+                console.error("Logout Error:", error);
+                alert("Failed to log out.");
+            }
+        });
+    }
+</script>
+
+
+</body></html>

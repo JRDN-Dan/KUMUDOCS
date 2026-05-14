@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Document Navigator | KUMUDOCS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#737782",
+                    "background": "#f9f9ff",
+                    "primary-container": "#004085",
+                    "on-secondary-fixed": "#001d37",
+                    "surface-tint": "#305ea4",
+                    "on-tertiary-fixed-variant": "#793105",
+                    "on-primary-fixed": "#001b3f",
+                    "tertiary-container": "#722c01",
+                    "inverse-surface": "#2f3035",
+                    "primary": "#002a5c",
+                    "primary-fixed-dim": "#abc7ff",
+                    "surface-variant": "#e2e2e8",
+                    "on-tertiary-fixed": "#351000",
+                    "secondary-fixed": "#d2e4ff",
+                    "secondary-fixed-dim": "#9fcaff",
+                    "surface-dim": "#d9d9e0",
+                    "on-surface": "#1a1c20",
+                    "tertiary-fixed-dim": "#ffb694",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-container": "#f99463",
+                    "tertiary": "#4f1c00",
+                    "inverse-on-surface": "#f0f0f7",
+                    "outline-variant": "#c3c6d2",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f9f9ff",
+                    "on-secondary-container": "#004172",
+                    "tertiary-fixed": "#ffdbcc",
+                    "on-background": "#1a1c20",
+                    "on-primary-container": "#84aefa",
+                    "on-error": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container": "#ededf4",
+                    "surface-container-low": "#f3f3fa",
+                    "on-secondary-fixed-variant": "#00497e",
+                    "surface-container-high": "#e8e8ee",
+                    "primary-fixed": "#d7e3ff",
+                    "surface-container-highest": "#e2e2e8",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#abc7ff",
+                    "secondary": "#0061a5",
+                    "secondary-container": "#66affe",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f9f9ff",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#434751",
+                    "on-primary-fixed-variant": "#0c458b",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "margin-desktop": "48px",
+                    "container-max-width": "1200px",
+                    "gutter": "24px",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "title-sm": ["Public Sans"],
+                    "display-lg": ["Public Sans"],
+                    "body-md": ["Public Sans"],
+                    "display-lg-mobile": ["Public Sans"],
+                    "label-sm": ["Public Sans"],
+                    "headline-md": ["Public Sans"]
+            },
+            "fontSize": {
+                    "title-sm": ["18px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #f9f9ff;
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .watermark-bg {
+            position: fixed;
+            bottom: -50px;
+            left: -50px;
+            opacity: 0.03;
+            z-index: -1;
+            pointer-events: none;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .card-shadow {
+            box-shadow: 0 4px 20px -4px rgba(0, 64, 133, 0.08);
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- Watermark Illustration -->
+<div class="watermark-bg">
+<span class="material-symbols-outlined text-[400px]">waves</span>
+</div>
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest dark:bg-surface-container-lowest border-b border-outline-variant dark:border-outline-variant docked full-width top-0 z-50">
+    <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-width mx-auto">
+        
+        <!-- WRAPPED THE LOGO AND TITLE TOGETHER HERE -->
+        <div class="flex items-center gap-3">
+            <img src="/KUMUDOCS.png" alt="KUMUDOCS Logo" class="h-8 w-auto object-contain"/>
+            <div class="text-title-sm font-title-sm font-black text-primary dark:text-inverse-primary uppercase tracking-tighter">
+                KUMUDOCS
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE NAVIGATION LINKS -->
+        <div class="flex items-center gap-6">
+            <div class="hidden md:flex ml-8 items-center gap-8">
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="/header/user-profile.html">Profile</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="/header/help.html">Help</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="/header/about.html">About</a>
+            </div>
+<button id="logout-btn" class="text-label-sm font-label-sm text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors flex items-center gap-1">
+    <span>Logout</span>
+</button>        </div>
+
+    </nav>
+</header>
+<main class="max-w-container-width mx-auto px-margin-mobile md:px-margin-desktop py-12"><div class="mb-6">
+<a class="inline-flex items-center gap-2 text-primary hover:text-secondary transition-colors group" href="/home-page.html">
+<span class="material-symbols-outlined text-title-sm">arrow_back</span>
+<span class="text-label-sm font-label-sm font-bold">Back to Dashboard</span>
+</a>
+</div>
+<!-- Page Header -->
+<div class="mb-12">
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg text-primary mb-2">Document Navigator</h1>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-2xl">
+                Select the government document you wish to process. Our structured system ensures your application follows official institutional guidelines.
+            </p>
+</div>
+<!-- Document Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- NBI Clearance Card -->
+<a href="/documents/nbi.html" class="block md:col-span-6 bg-surface-container-lowest border border-outline-variant rounded-xl p-8 card-shadow hover:border-primary transition-all group cursor-pointer">
+    <div class="flex flex-col h-full">
+        <div class="bg-primary-container/5 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors">
+            <span class="material-symbols-outlined text-primary group-hover:text-on-primary text-4xl">fingerprint</span>
+        </div>
+        <h2 class="text-headline-md font-headline-md text-primary mb-3">NBI Clearance</h2>
+        <p class="text-body-md font-body-md text-on-surface-variant mb-8 flex-grow">
+            Official certification issued by the National Bureau of Investigation. Required for employment, travel abroad, and local licensing requirements.
+        </p>
+        <div class="flex items-center text-primary font-bold gap-2">
+            <span class="text-label-sm font-label-sm">Start Application</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </div>
+    </div>
+</a>
+
+<!-- Birth Certificate Card -->
+<a href="/documents/bc.html" class="block md:col-span-6 bg-surface-container-lowest border border-outline-variant rounded-xl p-8 card-shadow hover:border-primary transition-all group cursor-pointer">
+    <div class="flex flex-col h-full">
+        <div class="bg-primary-container/5 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors">
+            <span class="material-symbols-outlined text-primary group-hover:text-on-primary text-4xl">child_care</span>
+        </div>
+        <h2 class="text-headline-md font-headline-md text-primary mb-3">Birth Certificate</h2>
+        <p class="text-body-md font-body-md text-on-surface-variant mb-8 flex-grow">
+            PSA-authenticated copy of your Certificate of Live Birth. Essential for identification, passport applications, and educational enrollment.
+        </p>
+        <div class="flex items-center text-primary font-bold gap-2">
+            <span class="text-label-sm font-label-sm">Request Copy</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </div>
+    </div>
+</a>
+</div>
+<!-- Instructional Section -->
+<section class="mt-16 bg-surface-container rounded-xl p-8 md:p-12 border border-outline-variant overflow-hidden relative">
+    <div class="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+            <h2 class="text-headline-md font-headline-md text-primary mb-4">How it Works</h2>
+            <ul class="space-y-4">
+                <li class="flex gap-4 items-start">
+                    <span class="bg-primary text-on-primary w-6 h-6 rounded-full flex items-center justify-center text-[12px] font-bold shrink-0">1</span>
+                    <p class="text-body-md font-body-md text-on-surface">Select your required document from the list above.</p>
+                </li>
+                <li class="flex gap-4 items-start">
+                    <span class="bg-primary text-on-primary w-6 h-6 rounded-full flex items-center justify-center text-[12px] font-bold shrink-0">2</span>
+                    <p class="text-body-md font-body-md text-on-surface">Upload scanned copies of your primary and secondary identification.</p>
+                </li>
+                <li class="flex gap-4 items-start">
+                    <span class="bg-primary text-on-primary w-6 h-6 rounded-full flex items-center justify-center text-[12px] font-bold shrink-0">3</span>
+                    <p class="text-body-md font-body-md text-on-surface">Confirm appointment date and secure payment via integrated gateway.</p>
+                </li>
+            </ul>
+        </div>
+        <div class="hidden md:block">
+            <img alt="Official government documents" class="rounded-lg shadow-xl" data-alt="A clean, professional photograph of official government documents and a fountain pen resting on a bright white desk. The lighting is high-key and soft, creating a modern and trustworthy atmosphere. A navy blue folder sits partially in the frame, echoing the primary brand colors of the UI. The overall composition is organized, minimalist, and evokes institutional reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtxl3HN5KmTXN5fCtbkkhsm30GoNt_aXocQcDrHeCG0dBjAMRSFhmjzkxiludu45zaKc9xx72y6HOO7oWisfe4BNxDGhgDRW44RawGvBOj1i5O3xrYnnLCr0KNAn3FLAwPZyDiMD_Uy9OvfWxl5dpmoiga_HiqVqrihWT6gDJ1rJOKX12Ap0TE3Fth58-lK3b_-j-SOGiJAMmus8sLR7xR2Yl8DJ2FmM7wr-cc5xVE7Ty6dGAjc5K0e5I1sXiwu6bQZken2Keamfgg"/>
+        </div>
+    </div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-[1200px] mx-auto">
+<div class="mb-4 md:mb-0 text-center md:text-left">
+<div class="text-label-sm font-label-sm font-bold text-primary mb-2">KUMUDOCS</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant max-w-xs">© 2024 KUMUDOCS. All government trademarks belong to their respective agencies.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-label-sm font-label-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-label-sm font-label-sm" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script type="module">
+    // 1. Add 'signOut' to your existing auth imports
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+    // 2. Your existing config
+    const firebaseConfig = {
+        apiKey: "AIzaSyBGUmZNzSpDM7VgpXS8g78yJ_O10sGvklQ",
+        authDomain: "kumudocs.firebaseapp.com",
+        projectId: "kumudocs",
+        storageBucket: "kumudocs.firebasestorage.app",
+        messagingSenderId: "652105060147",
+        appId: "1:652105060147:web:715f7ec2a3760aad9fb846"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // 3. PASTE THE LOGOUT LOGIC HERE
+    const logoutBtn = document.getElementById('logout-btn');
+
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', async () => {
+            try {
+                await signOut(auth);
+                // After logging out, send them back to the login page
+                window.location.href = "/log-in.html"; 
+            } catch (error) {
+                console.error("Logout Error:", error);
+                alert("Failed to log out.");
+            }
+        });
+    }
+</script>
+
+</body></html>

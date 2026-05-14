@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TIN Registration Details | KUMUDOCS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-fixed-dim": "#9fcaff",
+            "surface-container-low": "#f3f3fa",
+            "inverse-on-surface": "#f0f0f7",
+            "inverse-primary": "#abc7ff",
+            "surface-variant": "#e2e2e8",
+            "on-surface-variant": "#434751",
+            "error": "#ba1a1a",
+            "on-secondary": "#ffffff",
+            "on-primary": "#ffffff",
+            "surface-container-highest": "#e2e2e8",
+            "on-tertiary-fixed-variant": "#793105",
+            "primary-fixed-dim": "#abc7ff",
+            "outline-variant": "#c3c6d2",
+            "surface-dim": "#d9d9e0",
+            "surface-bright": "#f9f9ff",
+            "secondary-fixed": "#d2e4ff",
+            "on-primary-fixed": "#001b3f",
+            "on-surface": "#1a1c20",
+            "primary-container": "#004085",
+            "tertiary": "#4f1c00",
+            "on-tertiary-fixed": "#351000",
+            "on-secondary-container": "#004172",
+            "on-tertiary-container": "#f99463",
+            "on-error-container": "#93000a",
+            "surface": "#f9f9ff",
+            "surface-tint": "#305ea4",
+            "on-primary-container": "#84aefa",
+            "outline": "#737782",
+            "on-tertiary": "#ffffff",
+            "surface-container": "#ededf4",
+            "error-container": "#ffdad6",
+            "surface-container-high": "#e8e8ee",
+            "on-background": "#1a1c20",
+            "secondary": "#0061a5",
+            "background": "#f9f9ff",
+            "primary": "#002a5c",
+            "tertiary-fixed-dim": "#ffb694",
+            "secondary-container": "#66affe",
+            "inverse-surface": "#2f3035",
+            "tertiary-fixed": "#ffdbcc",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed-variant": "#00497e",
+            "on-secondary-fixed": "#001d37",
+            "on-error": "#ffffff",
+            "primary-fixed": "#d7e3ff",
+            "on-primary-fixed-variant": "#0c458b",
+            "tertiary-container": "#722c01"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "unit": "4px",
+            "margin-desktop": "48px",
+            "margin-mobile": "16px",
+            "container-max-width": "1200px",
+            "gutter": "24px"
+          },
+          "fontFamily": {
+            "label-sm": ["Public Sans"],
+            "display-lg-mobile": ["Public Sans"],
+            "body-md": ["Public Sans"],
+            "headline-md": ["Public Sans"],
+            "display-lg": ["Public Sans"],
+            "title-sm": ["Public Sans"]
+          },
+          "fontSize": {
+            "label-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+            "display-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+            "display-lg": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "title-sm": ["18px", {"lineHeight": "1.4", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .watermark-octopus {
+      position: fixed;
+      bottom: -100px;
+      right: -50px;
+      opacity: 0.03;
+      z-index: -1;
+      width: 600px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest dark:bg-surface-container-lowest border-b border-outline-variant dark:border-outline-variant docked full-width top-0 z-50">
+    <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-width mx-auto">
+        
+        <!-- WRAPPED THE LOGO AND TITLE TOGETHER HERE -->
+        <div class="flex items-center gap-3">
+            <img src="/KUMUDOCS.png" alt="KUMUDOCS Logo" class="h-8 w-auto object-contain"/>
+            <div class="text-title-sm font-title-sm font-black text-primary dark:text-inverse-primary uppercase tracking-tighter">
+                KUMUDOCS
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE NAVIGATION LINKS -->
+        <div class="flex items-center gap-6">
+            <div class="hidden md:flex ml-8 items-center gap-8">
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="/header/user-profile.html">Profile</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="/header/help.html">Help</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="/header/about.html">About</a>
+            </div>
+<button id="logout-btn" class="text-label-sm font-label-sm text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors flex items-center gap-1">
+    <span>Logout</span>
+</button>        </div>
+
+    </nav>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Watermark Background -->
+<img alt="" aria-hidden="true" class="watermark-octopus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeZlhqzgeOa-rA51zbeEAU4MmwqSHKjRsirR59LDoGRst_jJIoNqM6G2us-FoUYLbPqczw5LBbRgohb6z00EcvZwyrw_g6eakDWrwjZ9vR_PyIt_VDmm0-vBeuaKUW5LruZRmi1TZncaXxK1-d6k-mhyZlVrdB070RUip0BDKrr8xRVwm5ChfU6489YVJm82rJad3Kvt1enWP8uYBt1pDfsvatF1NhvYvNYzKdDXfTzvECr4eXqRXAAF-szyMDpe20Wq-GrXEb1vpM"/>
+<!-- Hero Section -->
+
+<section class="mb-12">
+    <!-- Back Link (Kept at the top, outside the flex row so it sits above the title) -->
+    <a class="inline-flex items-center gap-2 text-label-sm font-semibold text-primary hover:text-secondary-container transition-colors mb-6 group" href="/ID-Selection/ID-selection.html">
+        <span class="material-symbols-outlined text-[20px] transition-transform group-hover:-translate-x-1">arrow_back</span>
+        Back to Documents
+    </a>
+
+    <!-- Main Header Row -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        
+        <!-- Left Side: Title & Description -->
+        <div class="max-w-2xl border-l-4 border-primary pl-6">
+            <h1 class="text-display-lg font-bold text-primary mb-2">Taxpayer Identification Number (TIN)</h1>
+            <p class="text-body-md text-on-surface-variant">A permanent identification number issued by the Bureau of Internal Revenue (BIR) to every taxpayer in the Philippines for tax purposes, identification, and government transactions.</p>
+        </div>
+
+        <!-- Right Side: Action Button -->
+        <div>
+            <a class="inline-flex items-center justify-center px-8 py-3 bg-primary-container text-on-primary-container font-bold rounded-lg hover:opacity-90 transition-all gap-2" href="https://www.bir.gov.ph/primary-registration" target="_blank">
+                <span class="material-symbols-outlined text-[20px]">open_in_new</span>
+                Visit BIR official website
+            </a>
+        </div>
+        
+    </div>
+</section>
+
+
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Left Column: Steps (8 Columns) -->
+<div class="md:col-span-8 space-y-8">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-8 shadow-[0_4px_20px_-4px_rgba(0,42,92,0.08)]">
+<h2 class="text-headline-md font-headline-md text-primary mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">account_tree</span>
+            Registration Process
+          </h2>
+<div class="relative">
+<!-- Vertical Line Logic -->
+<div class="absolute left-[19px] top-4 bottom-4 w-[2px] bg-outline-variant"></div>
+<div class="space-y-10">
+<!-- Step 1 -->
+<div class="relative pl-14">
+<div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold z-10">1</div>
+<h3 class="text-title-sm font-title-sm text-primary mb-2">Determine applicable BIR form</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Identify your taxpayer category (e.g., employee, self-employed, or estate) to select the correct registration form. Most individuals use Form 1902 or 1904.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative pl-14">
+<div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold z-10">2</div>
+<h3 class="text-title-sm font-title-sm text-primary mb-2">Fill out form</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Complete the BIR registration form with accurate personal information. Ensure all mandatory fields are legible and match your official identification documents.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative pl-14">
+<div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold z-10">3</div>
+<h3 class="text-title-sm font-title-sm text-primary mb-2">Submit requirements to BIR office</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Visit the Revenue District Office (RDO) having jurisdiction over your place of residence or business address to submit your documents.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative pl-14">
+<div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold z-10">4</div>
+<h3 class="text-title-sm font-title-sm text-primary mb-2">Receive TIN Number</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Once processed, you will be issued your unique Taxpayer Identification Number. Keep this number secure as it is permanent for life.</p>
+</div>
+<!-- Step 5 (Optional) -->
+<div class="relative pl-14">
+<div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-surface-container-high border-2 border-primary flex items-center justify-center text-primary font-bold z-10">5</div>
+<div class="inline-block px-2 py-0.5 bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase rounded-full mb-1">Optional</div>
+<h3 class="text-title-sm font-title-sm text-primary mb-2">TIN ID application</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">You may request the physical TIN ID card after your number is generated. Check with your RDO for availability and specific ID issuance schedules.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Requirements & Info (4 Columns) -->
+<aside class="md:col-span-4 space-y-6">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6">
+<h2 class="text-title-sm font-title-sm text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined">description</span>
+            Document Checklist
+          </h2>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<span class="font-bold block text-on-surface">PSA Birth Certificate</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Original and clear photocopy</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<span class="font-bold block text-on-surface">Valid ID</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Passport, Driver's License, or UMID</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<span class="font-bold block text-on-surface">BIR Form 1902/1904</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Two (2) accomplished copies</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Call to Action Card -->
+
+<div class="relative z-10">
+
+<!-- Decorative Background Image -->  
+<div class="absolute -right-4 -bottom-4 opacity-10">
+
+</div>
+</div>
+<!-- Illustration Image -->
+<div class="rounded-xl overflow-hidden border border-outline-variant">
+<img class="w-full h-48 object-cover" data-alt="A clean, minimalist workspace with a sleek laptop, a cup of coffee, and neatly organized government documents on a pristine white desk. The lighting is soft and natural, emphasizing a professional and focused atmosphere. The color palette consists of deep navy blues, crisp whites, and subtle grey tones, reflecting a trustworthy institutional design style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt0pJPqaqELKWYQ2r1Z3Gj3tysX0QClM8rJZhi9ttvUVQO_PP16oYTSg5fLRPMkpKIOobINSpAHBK_amEa7Sl_Tsv9cBz8qMuTbeqEnY_tZunmxa9KXD4RbtZYolT2gJaqFj5Rho9d4xXkioMEwdGCrm_-0C0sBYOi62vYtaO_GmNOlbK1vsAc6p_16mkaTKUIDlS1t6eP_bRZ7eha19VF0tRZwtxlzvHQkaF0Zo-JCXRpxW_gIJvdMpjg8ZpfOWZL0OPLZstNxA24"/>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-[1200px] mx-auto">
+<div class="mb-4 md:mb-0 text-center md:text-left">
+<div class="text-label-sm font-label-sm font-bold text-primary mb-2">KUMUDOCS</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant max-w-xs">© 2024 KUMUDOCS. All government trademarks belong to their respective agencies.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-label-sm font-label-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-label-sm font-label-sm" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+
+<script type="module">
+    // 1. Add 'signOut' to your existing auth imports
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+    // 2. Your existing config
+    const firebaseConfig = {
+        apiKey: "AIzaSyBGUmZNzSpDM7VgpXS8g78yJ_O10sGvklQ",
+        authDomain: "kumudocs.firebaseapp.com",
+        projectId: "kumudocs",
+        storageBucket: "kumudocs.firebasestorage.app",
+        messagingSenderId: "652105060147",
+        appId: "1:652105060147:web:715f7ec2a3760aad9fb846"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // 3. PASTE THE LOGOUT LOGIC HERE
+    const logoutBtn = document.getElementById('logout-btn');
+
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', async () => {
+            try {
+                await signOut(auth);
+                // After logging out, send them back to the login page
+                window.location.href = "/log-in.html"; 
+            } catch (error) {
+                console.error("Logout Error:", error);
+                alert("Failed to log out.");
+            }
+        });
+    }
+</script>
+
+</body></html>

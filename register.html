@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Register | KUMUDOCS</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#ffdbcc",
+                      "primary": "#002a5c",
+                      "on-tertiary-fixed": "#351000",
+                      "surface-tint": "#305ea4",
+                      "secondary-container": "#66affe",
+                      "surface-variant": "#e2e2e8",
+                      "on-secondary": "#ffffff",
+                      "on-background": "#1a1c20",
+                      "on-primary-fixed-variant": "#0c458b",
+                      "primary-fixed": "#d7e3ff",
+                      "inverse-primary": "#abc7ff",
+                      "tertiary-fixed-dim": "#ffb694",
+                      "secondary-fixed": "#d2e4ff",
+                      "on-error-container": "#93000a",
+                      "tertiary": "#4f1c00",
+                      "inverse-surface": "#2f3035",
+                      "on-primary-container": "#84aefa",
+                      "outline-variant": "#c3c6d2",
+                      "on-secondary-fixed": "#001d37",
+                      "on-secondary-container": "#004172",
+                      "primary-container": "#004085",
+                      "on-surface-variant": "#434751",
+                      "on-primary-fixed": "#001b3f",
+                      "on-tertiary-fixed-variant": "#793105",
+                      "error-container": "#ffdad6",
+                      "tertiary-container": "#722c01",
+                      "on-tertiary": "#ffffff",
+                      "surface-dim": "#d9d9e0",
+                      "surface-container-highest": "#e2e2e8",
+                      "on-surface": "#1a1c20",
+                      "surface-bright": "#f9f9ff",
+                      "surface": "#f9f9ff",
+                      "on-tertiary-container": "#f99463",
+                      "primary-fixed-dim": "#abc7ff",
+                      "inverse-on-surface": "#f0f0f7",
+                      "surface-container-low": "#f3f3fa",
+                      "surface-container-high": "#e8e8ee",
+                      "background": "#f9f9ff",
+                      "error": "#ba1a1a",
+                      "on-primary": "#ffffff",
+                      "secondary": "#0061a5",
+                      "on-secondary-fixed-variant": "#00497e",
+                      "secondary-fixed-dim": "#9fcaff",
+                      "outline": "#737782",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error": "#ffffff",
+                      "surface-container": "#ededf4"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "unit": "4px",
+                      "margin-desktop": "48px",
+                      "container-max-width": "1200px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "title-sm": ["Public Sans"],
+                      "label-sm": ["Public Sans"],
+                      "display-lg": ["Public Sans"],
+                      "headline-md": ["Public Sans"],
+                      "display-lg-mobile": ["Public Sans"],
+                      "body-md": ["Public Sans"]
+              },
+              "fontSize": {
+                      "title-sm": ["18px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "label-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                      "display-lg": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "display-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body { font-family: "Public Sans", sans-serif }
+    .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        display: inline-block;
+        vertical-align: middle
+    }
+    .watermark-pattern {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.96)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuAUnFLx3OIJL5PZWKzfXTaPFt__P_w7yBGMSkE_NxCPMsnpRBW39aoEzMQtNI6NzgDIifE1YZtomTEaFW_UslbhyKqy4NeLO15jdUzIqeiCm7CFKRH4Dgb2vL49tG1L9Wne28_qEgrwG7Dl0lVUprNwzJfE-_1TBQhFrKauEkNKUohrqxKYavk2A7I1lUPHwbtsL0bVTz_9rTXka30KoqEUZJw93pMVyrL5WTjSCcjPJJ3alBrnwiQR-KfigEhbF6YpkOyH5bLbrwJS);
+        background-size: cover;
+        background-position: center
+    }
+</style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<header class="bg-surface-container-lowest border-b border-outline-variant docked full-width top-0 z-50">
+    <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-width mx-auto">
+        <div class="flex items-center gap-3">
+            <img src="KUMUDOCS.png" alt="KUMUDOCS Logo" class="h-8 w-auto object-contain"/>
+            <div class="text-title-sm font-title-sm font-black text-primary uppercase tracking-tighter">KUMUDOCS</div>
+        </div>
+    </nav>
+</header>
+
+<main class="flex-grow flex items-center justify-center py-12 px-margin-mobile watermark-pattern">
+<div class="w-full max-w-md">
+<div class="bg-surface-container-lowest border border-outline-variant shadow-[0_8px_30px_rgb(0,42,92,0.04)] p-8 md:p-12">
+<div class="text-center mb-10">
+<div class="mb-6 inline-flex items-center justify-center w-16 h-16 bg-primary-container rounded-full">
+<span class="material-symbols-outlined text-on-primary-container text-[40px]" data-icon="settings_accessibility">settings_accessibility</span>
+</div>
+<h1 class="text-headline-md font-headline-md text-primary mb-2">Create Account</h1>
+<p class="text-body-md font-body-md text-on-surface-variant">KUMUha ng DOCS</p>
+</div>
+
+<form id="register-form" class="space-y-6">
+<div class="space-y-2">
+<label class="block text-label-sm font-bold text-on-surface" for="full-name">Name</label>
+<input class="w-full px-4 py-3 bg-surface-container-lowest border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all text-body-md font-body-md" id="full-name" name="full-name" placeholder="John Doe" type="text" required/>
+</div>
+<div class="space-y-2">
+<label class="block text-label-sm font-bold text-on-surface" for="email">Email Address</label>
+<input class="w-full px-4 py-3 bg-surface-container-lowest border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all text-body-md font-body-md" id="email" name="email" placeholder="name@agency.gov" type="email" required/>
+</div>
+<div class="space-y-2">
+<label class="block text-label-sm font-bold text-on-surface" for="phone">Cellphone Number</label>
+<input class="w-full px-4 py-3 bg-surface-container-lowest border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all text-body-md font-body-md" id="phone" name="phone" placeholder="+63 900 000 0000" type="tel" required/>
+</div>
+<div class="space-y-2">
+<label class="block text-label-sm font-bold text-on-surface" for="password">Password</label>
+<input class="w-full px-4 py-3 bg-surface-container-lowest border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all text-body-md font-body-md" id="password" name="password" placeholder="••••••••" type="password" required minlength="6"/>
+</div>
+<div class="pt-4">
+<button id="reg-btn" class="w-full bg-primary text-on-primary py-4 text-label-sm font-bold hover:bg-primary-container transition-all active:opacity-80" type="submit">
+    REGISTER
+</button>
+</div>
+<div class="text-center pt-4">
+<p class="text-label-sm font-label-sm text-on-surface-variant">
+    Already have an account? 
+    <a class="text-primary font-bold hover:underline" href="/log-in.html">Login</a>
+</p>
+</div>
+</form>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-[1200px] mx-auto">
+<div class="mb-4 md:mb-0 text-center md:text-left">
+<div class="text-label-sm font-label-sm font-bold text-primary mb-2">KUMUDOCS</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant max-w-xs">© 2024 KUMUDOCS. All government trademarks belong to their respective agencies.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-label-sm font-label-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-label-sm font-label-sm" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+    import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    // Your Firebase Configuration (Keep this exactly as provided earlier)
+    const firebaseConfig = {
+        apiKey: "AIzaSyBGUmZNzSpDM7VgpXS8g78yJ_O10sGvklQ",
+        authDomain: "kumudocs.firebaseapp.com",
+        projectId: "kumudocs",
+        storageBucket: "kumudocs.firebasestorage.app",
+        messagingSenderId: "652105060147",
+        appId: "1:652105060147:web:715f7ec2a3760aad9fb846"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    document.getElementById('register-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('reg-btn');
+        btn.innerText = "CREATING ACCOUNT...";
+        btn.disabled = true;
+
+        const name = document.getElementById('full-name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const password = document.getElementById('password').value;
+
+        try {
+            // 1. Create the user in Firebase Auth
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            const user = userCredential.user;
+
+            // 2. Save the extra data in Firestore using the UID as the document ID
+            await setDoc(doc(db, "users", user.uid), {
+                name: name,
+                email: email,
+                phone: phone,
+                photoURL: "https://ui-avatars.com/api/?name=" + encodeURIComponent(name)
+            });
+
+            alert("Account created successfully!");
+            window.location.href = "/home-page.html";
+
+        } catch (error) {
+            console.error("Error during registration:", error);
+            alert(error.message);
+        } finally {
+            btn.innerText = "REGISTER";
+            btn.disabled = false;
+        }
+    });
+</script>
+</body>
+</html>

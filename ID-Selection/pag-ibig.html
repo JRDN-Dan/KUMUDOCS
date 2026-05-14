@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pag-IBIG Membership &amp; ID | KUMUDOCS</title>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c3c6d2",
+                        "inverse-surface": "#2f3035",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#00497e",
+                        "on-primary-fixed": "#001b3f",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#ededf4",
+                        "primary": "#002a5c",
+                        "on-primary-fixed-variant": "#0c458b",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e2e2e8",
+                        "tertiary-container": "#722c01",
+                        "on-tertiary-fixed-variant": "#793105",
+                        "tertiary": "#4f1c00",
+                        "surface-bright": "#f9f9ff",
+                        "on-error": "#ffffff",
+                        "on-background": "#1a1c20",
+                        "surface": "#f9f9ff",
+                        "tertiary-fixed-dim": "#ffb694",
+                        "primary-fixed": "#d7e3ff",
+                        "surface-tint": "#305ea4",
+                        "primary-fixed-dim": "#abc7ff",
+                        "surface-dim": "#d9d9e0",
+                        "secondary-container": "#66affe",
+                        "outline": "#737782",
+                        "surface-container-highest": "#e2e2e8",
+                        "secondary-fixed-dim": "#9fcaff",
+                        "on-tertiary-fixed": "#351000",
+                        "on-secondary-container": "#004172",
+                        "tertiary-fixed": "#ffdbcc",
+                        "on-surface-variant": "#434751",
+                        "background": "#f9f9ff",
+                        "on-primary-container": "#84aefa",
+                        "surface-container-low": "#f3f3fa",
+                        "inverse-primary": "#abc7ff",
+                        "secondary": "#0061a5",
+                        "on-secondary-fixed": "#001d37",
+                        "surface-container-high": "#e8e8ee",
+                        "secondary-fixed": "#d2e4ff",
+                        "primary-container": "#004085",
+                        "on-tertiary-container": "#f99463",
+                        "on-surface": "#1a1c20",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f0f0f7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "container-max-width": "1200px",
+                        "margin-desktop": "48px",
+                        "unit": "4px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Public Sans"],
+                        "label-sm": ["Public Sans"],
+                        "display-lg-mobile": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "headline-md": ["Public Sans"],
+                        "title-sm": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["36px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "title-sm": ["18px", { "lineHeight": "1.4", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .watermark-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(0, 42, 92, 0.03) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col watermark-pattern">
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest dark:bg-surface-container-lowest border-b border-outline-variant dark:border-outline-variant docked full-width top-0 z-50">
+    <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-width mx-auto">
+        
+        <!-- WRAPPED THE LOGO AND TITLE TOGETHER HERE -->
+        <div class="flex items-center gap-3">
+            <img src="/KUMUDOCS.png" alt="KUMUDOCS Logo" class="h-8 w-auto object-contain"/>
+            <div class="text-title-sm font-title-sm font-black text-primary dark:text-inverse-primary uppercase tracking-tighter">
+                KUMUDOCS
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE NAVIGATION LINKS -->
+        <div class="flex items-center gap-6">
+            <div class="hidden md:flex ml-8 items-center gap-8">
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="/header/user-profile.html">Profile</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="/header/help.html">Help</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="/header/about.html">About</a>
+            </div>
+<button id="logout-btn" class="text-label-sm font-label-sm text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors flex items-center gap-1">
+    <span>Logout</span>
+</button>        </div>
+
+    </nav>
+</header>
+<main class="flex-grow w-full max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-8">
+<!-- Hero Section -->
+<div class="mb-12 border-l-4 border-primary pl-6">
+<a class="inline-flex items-center gap-2 text-label-sm font-semibold text-primary hover:text-secondary-container transition-colors mb-6 group" href="/ID-Selection/ID-selection.html">
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:-translate-x-1">arrow_back</span>
+        Back to Documents
+      </a>
+<h1 class="text-display-lg font-bold text-primary mb-2">Pag-IBIG Membership &amp; ID</h1>
+<p class="text-body-md text-on-surface-variant max-w-2xl">The Postal ID is the primary identification card issued by the Philippine Postal Corporation (PHLPost). It is recognized by all government agencies and financial institutions as a valid proof of identity and address.</p>
+</div>
+
+<!-- Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Application Process -->
+<div class="lg:col-span-8 space-y-gutter">
+<div class="bg-surface-container-lowest border border-outline-variant p-8 shadow-[0_4px_20px_-4px_rgba(0,42,92,0.08)]">
+<h2 class="text-headline-md font-headline-md text-primary mb-8 flex items-center">
+<span class="material-symbols-outlined mr-3 text-secondary">how_to_reg</span>
+                        Application Process
+                    </h2>
+<div class="space-y-10 relative">
+<!-- Step 1 -->
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-title-sm">1</div>
+<div>
+<h3 class="text-title-sm font-title-sm text-on-surface mb-2">Register Online or In-Person</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Visit the official Pag-IBIG online registration portal or proceed to the nearest HDMF branch to initiate your membership application.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-title-sm">2</div>
+<div>
+<h3 class="text-title-sm font-title-sm text-on-surface mb-2">Fill out Member Data Form (MDF)</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Complete the Member Data Form with accurate personal details, employment history, and beneficiary information. Ensure all fields are legible if filing manually.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-title-sm">3</div>
+<div>
+<h3 class="text-title-sm font-title-sm text-on-surface mb-2">Submit Requirements</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Present your original documents and photocopies to the Pag-IBIG representative for verification and processing of your membership record.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-title-sm">4</div>
+<div>
+<h3 class="text-title-sm font-title-sm text-on-surface mb-2">Receive Pag-IBIG MID Number</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Once verified, you will be issued a 12-digit Pag-IBIG Membership ID (MID) number, which serves as your permanent reference for all fund transactions.</p>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-title-sm">5</div>
+<div>
+<h3 class="text-title-sm font-title-sm text-on-surface mb-2">Optional Loyalty Card Application</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">You may opt to apply for the Pag-IBIG Loyalty Card Plus, which doubles as a transaction card and provides discounts at partner establishments nationwide.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Descriptive Image -->
+<div class="h-[235px] overflow-hidden border border-outline-variant shadow-sm">
+<img alt="Institutional Documentation" class="w-full h-full object-cover" data-alt="A professional, close-up photograph of high-quality ivory office documents stacked neatly on a dark wooden desk. A classic silver and black fountain pen rests elegantly across the top page, catching soft, directional light from a nearby window. The atmosphere is quiet and institutional, conveying a sense of legal authority and organized competence. The color palette is dominated by deep navy blues and crisp whites, echoing a corporate modernism aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNU-N25Avp57x8Tpciqyz1mn8EzxXeFFt6KFUuI6OECACuuPF5vV5nzshojtaPVSV6IXUO-Q5Bj2GPwBwbqC0yGEnn8ddrXQjHeLEadffW89MtWjlv2tTtWMeqqs7Cf5L95KW7y6tERAdWFaoq7MfNviwRRMLxv3DrA_zgc614qj0NgGHPRU7WsWOcFQ6tamXSudnJkxc6cDjTYfaNBavcHPmdkzcQrb86ziGJTRt00qqA2id5kxX-iL0AAUTRz60WI4-z2Tn9HrdJ"/>
+</div>
+</div>
+<!-- Right Column: Mandatory Requirements -->
+<aside class="lg:col-span-4 space-y-gutter">
+<div class="bg-surface-container-lowest border border-outline-variant p-8 shadow-[0_4px_20px_-4px_rgba(0,42,92,0.08)] mb-gutter">
+<h2 class="text-title-sm font-title-sm text-primary mb-4 flex items-center">
+<span class="material-symbols-outlined mr-2">language</span>
+        Official Portal
+    </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 leading-relaxed">
+        Access the official Pag-IBIG Virtual portal for online registration, contributions, and loan applications.
+    </p>
+<a class="inline-flex items-center justify-center w-full px-6 py-3 bg-primary text-on-primary font-bold text-label-sm rounded-lg hover:bg-secondary transition-colors gap-2" href="https://www.pagibigfundservices.com/" target="_blank">
+<span>Visit Pag-IBIG official website</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div><div class="bg-surface-container-low border border-outline-variant p-8">
+<h2 class="text-headline-md font-headline-md text-primary mb-6">Mandatory Requirements</h2>
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-8 uppercase tracking-wider font-bold">Document Checklist</p>
+<ul class="space-y-6">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-secondary mr-3 mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<strong class="block text-on-surface font-semibold">Valid ID</strong>
+<span class="text-body-md font-body-md text-on-surface-variant">Government-issued identification (Passport, Driver's License, PRC ID, etc.)</span>
+</div>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-secondary mr-3 mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<strong class="block text-on-surface font-semibold">PSA Birth Certificate</strong>
+<span class="text-body-md font-body-md text-on-surface-variant">Original and clear photocopy of your Birth Certificate from the Philippine Statistics Authority.</span>
+</div>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-secondary mr-3 mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<strong class="block text-on-surface font-semibold">Member Data Form (MDF)</strong>
+<span class="text-body-md font-body-md text-on-surface-variant">Fully accomplished form with no erasures. Available at branches or online.</span>
+</div>
+</li>
+</ul>
+<div class="mt-10 pt-8 border-t border-outline-variant">
+<p class="text-label-sm font-label-sm text-on-surface-variant italic leading-relaxed">
+                            * Note: Additional documents may be required for special membership categories (OFW, Voluntary, or Self-Employed).
+                        </p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-[1200px] mx-auto">
+<div class="mb-4 md:mb-0 text-center md:text-left">
+<div class="text-label-sm font-label-sm font-bold text-primary mb-2">KUMUDOCS</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant max-w-xs">© 2024 KUMUDOCS. All government trademarks belong to their respective agencies.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-label-sm font-label-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-label-sm font-label-sm" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+
+<script type="module">
+    // 1. Add 'signOut' to your existing auth imports
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+    // 2. Your existing config
+    const firebaseConfig = {
+        apiKey: "AIzaSyBGUmZNzSpDM7VgpXS8g78yJ_O10sGvklQ",
+        authDomain: "kumudocs.firebaseapp.com",
+        projectId: "kumudocs",
+        storageBucket: "kumudocs.firebasestorage.app",
+        messagingSenderId: "652105060147",
+        appId: "1:652105060147:web:715f7ec2a3760aad9fb846"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // 3. PASTE THE LOGOUT LOGIC HERE
+    const logoutBtn = document.getElementById('logout-btn');
+
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', async () => {
+            try {
+                await signOut(auth);
+                // After logging out, send them back to the login page
+                window.location.href = "/log-in.html"; 
+            } catch (error) {
+                console.error("Logout Error:", error);
+                alert("Failed to log out.");
+            }
+        });
+    }
+</script>
+
+
+</body></html>

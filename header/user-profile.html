@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>User Profile | KUMUDOCS</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#737782",
+                        "background": "#f9f9ff",
+                        "primary-container": "#004085",
+                        "on-secondary-fixed": "#001d37",
+                        "surface-tint": "#305ea4",
+                        "on-tertiary-fixed-variant": "#793105",
+                        "on-primary-fixed": "#001b3f",
+                        "tertiary-container": "#722c01",
+                        "inverse-surface": "#2f3035",
+                        "primary": "#002a5c",
+                        "primary-fixed-dim": "#abc7ff",
+                        "surface-variant": "#e2e2e8",
+                        "on-tertiary-fixed": "#351000",
+                        "secondary-fixed": "#d2e4ff",
+                        "secondary-fixed-dim": "#9fcaff",
+                        "surface-dim": "#d9d9e0",
+                        "on-surface": "#1a1c20",
+                        "tertiary-fixed-dim": "#ffb694",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#f99463",
+                        "tertiary": "#4f1c00",
+                        "inverse-on-surface": "#f0f0f7",
+                        "outline-variant": "#c3c6d2",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f9f9ff",
+                        "on-secondary-container": "#004172",
+                        "tertiary-fixed": "#ffdbcc",
+                        "on-background": "#1a1c20",
+                        "on-primary-container": "#84aefa",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-container": "#ededf4",
+                        "surface-container-low": "#f3f3fa",
+                        "on-secondary-fixed-variant": "#00497e",
+                        "surface-container-high": "#e8e8ee",
+                        "primary-fixed": "#d7e3ff",
+                        "surface-container-highest": "#e2e2e8",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#abc7ff",
+                        "secondary": "#0061a5",
+                        "secondary-container": "#66affe",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f9f9ff",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#434751",
+                        "on-primary-fixed-variant": "#0c458b",
+                        "on-primary": "#ffffff"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "label-sm": ["Public Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest border-b border-outline-variant sticky w-full top-0 z-50">
+    <nav class="flex justify-between items-center w-full px-4 md:px-12 py-4 mx-auto">
+        
+        <div class="flex items-center gap-3">
+            <img src="/KUMUDOCS.png" alt="KUMUDOCS Logo" class="h-8 w-auto object-contain"/>
+            <div class="text-[18px] font-black text-primary dark:text-inverse-primary uppercase tracking-tighter">
+                KUMUDOCS
+            </div>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <div class="hidden md:flex ml-8 items-center gap-8">
+                <a class="text-[14px] text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors" href="/header/user-profile.html">Profile</a>
+                <a class="text-[14px] text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors" href="/header/help.html">Help</a>
+                <a class="text-[14px] text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors" href="/header/about.html">About</a>
+            </div>
+            <button id="logout-btn" class="text-[14px] text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors flex items-center gap-1">
+                <span>Logout</span>
+            </button>
+        </div>
+
+    </nav>
+</header>
+    <main class="flex-grow max-w-[1200px] mx-auto w-full px-4 md:px-12 py-8 md:grid md:grid-cols-12 md:gap-6">
+        
+        <!-- Side Navigation (Web) -->
+        <aside class="hidden md:block md:col-span-3">
+            <nav class="flex flex-col gap-2">
+                <a class="flex items-center gap-3 p-4 bg-primary-container text-on-primary-container rounded-lg font-bold" href="#">
+                    <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+                    <span class="text-[14px]">Profile</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Profile Content -->
+        <section class="md:col-span-9 flex flex-col gap-8">
+            <a class="flex items-center gap-2 text-primary hover:text-secondary transition-colors mb-2 group w-fit" href="/home-page.html">
+                <span class="material-symbols-outlined text-[20px] group-hover:-translate-x-1 transition-transform" data-icon="arrow_back">arrow_back</span>
+                <span class="text-[14px] font-bold uppercase tracking-wide">Back to Dashboard</span>
+            </a>
+
+            <!-- USER HEADER CARD WITH EDIT LOGIC IDs -->
+            <div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant shadow-[0_4px_20px_-4px_rgba(0,64,133,0.08)] flex flex-col md:flex-row items-center gap-8">
+                
+                <div class="relative group" id="profile-img-container">
+                    <img id="profile-img" alt="Profile" class="w-32 h-32 rounded-full object-cover border-4 border-surface-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgE0LNdlj8pjLl7JrZJKaSdEf33J4B9QPQbRTXJ24rSJIYvxNAzv5dGlhdZipGXNFwVONdRJig7qDqTDkWu6nH8RCQ759ixT3ewXZnEiITqqihtGXg6OoYsOGkt9iCazni6q9sDWg_2qCXYgJm1wAbEqmbrnhzTH85OkQFU6731PN-B7wmy8V7da5sSoGc61zCc2yrWS88t5p8kom8bvVlPVJLmv_vPYkUkYvTAREomWR4eh_5Lr9H-zud1VtJmloZGB0LoKnyp00_"/>
+                    <div id="img-edit-overlay" class="absolute inset-0 flex items-center justify-center bg-black/50 rounded-full opacity-0 pointer-events-none transition-opacity cursor-pointer">
+                        <span class="text-white text-xs font-bold text-center">Click to<br>Change</span>
+                    </div>
+                    <input type="file" id="file-input" class="hidden" accept="image/*" />
+                    <div id="status-badge" class="absolute bottom-1 right-1 bg-primary p-2 rounded-full border-4 border-surface-container-lowest"></div>
+                </div>
+
+                <div class="text-center md:text-left flex-grow">
+                    <h1 id="display-name" class="text-[28px] md:text-[36px] font-bold text-primary">Juan Dela Cruz</h1>
+                    <input type="text" id="edit-name-input" class="hidden text-[28px] md:text-[36px] font-bold text-primary border-b-2 border-primary focus:outline-none bg-transparent w-full md:w-auto" value="Juan Dela Cruz">
+                    <p class="text-[16px] text-on-surface-variant mt-1">juan.delacruz@email.ph</p>
+                </div>
+
+                <div>
+                    <div id="view-actions">
+                        <button id="edit-profile-btn" class="px-6 py-2 bg-primary text-white rounded-lg font-bold hover:opacity-90 transition-all text-[14px]">Edit Profile</button>
+                    </div>
+                    <div id="edit-actions" class="hidden flex flex-col sm:flex-row gap-2">
+                        <button id="cancel-btn" class="px-4 py-2 bg-surface-container text-on-surface rounded-lg font-bold hover:bg-surface-variant transition-all text-[14px]">Cancel</button>
+                        <button id="save-btn" class="px-4 py-2 bg-primary text-white rounded-lg font-bold hover:opacity-90 transition-all text-[14px] min-w-[100px]">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHECKLIST CONTAINER (Centered and Wide) -->
+            <div class="w-full">
+                <div class="bg-surface-container-lowest p-6 md:p-10 rounded-xl border border-outline-variant shadow-[0_4px_20px_-4px_rgba(0,64,133,0.08)]">
+                    <div class="flex justify-between items-center mb-8 border-b border-surface-container pb-4">
+                        <h2 class="text-[24px] font-bold text-primary">Document Status</h2>
+                        <span class="material-symbols-outlined text-primary text-3xl" data-icon="fact_check">fact_check</span>
+                    </div>
+                    
+                    <!-- EMPTY CONTAINER FOR JAVASCRIPT CHECKLIST -->
+                    <div id="checklist-container">
+                        <p class="text-sm text-on-surface-variant animate-pulse">Loading documents...</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-[1200px] mx-auto">
+<div class="mb-4 md:mb-0 text-center md:text-left">
+<div class="text-label-sm font-label-sm font-bold text-primary mb-2">KUMUDOCS</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant max-w-xs">© 2024 KUMUDOCS. All government trademarks belong to their respective agencies.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-label-sm font-label-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-label-sm font-label-sm" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, doc, updateDoc, getDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+    import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js";
+    import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyBGUmZNzSpDM7VgpXS8g78yJ_O10sGvklQ",
+        authDomain: "kumudocs.firebaseapp.com",
+        projectId: "kumudocs",
+        storageBucket: "kumudocs.firebasestorage.app",
+        messagingSenderId: "652105060147",
+        appId: "1:652105060147:web:715f7ec2a3760aad9fb846"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const storage = getStorage(app);
+    const auth = getAuth(app);
+
+    // DOM Elements
+    const displayName = document.getElementById('display-name');
+    const displayEmail = document.querySelector('p.text-on-surface-variant'); // Targets the email <p> tag
+    const profileImg = document.getElementById('profile-img');
+    const logoutBtn = document.getElementById('logout-btn');
+    const checklistContainer = document.getElementById('checklist-container');
+
+    // 1. AUTH WATCHER: This runs as soon as the page loads
+    onAuthStateChanged(auth, async (user) => {
+        if (user) {
+            console.log("Logged in as:", user.uid);
+            
+            // A. Fetch User Profile Data from Firestore
+            const userDocRef = doc(db, "users", user.uid);
+            const userSnap = await getDoc(userDocRef);
+
+            if (userSnap.exists()) {
+                const userData = userSnap.data();
+                displayName.innerText = userData.name;
+                displayEmail.innerText = userData.email;
+                if (userData.photoURL) profileImg.src = userData.photoURL;
+            }
+
+            // B. Load the Checklist for this specific user
+            // Note: We use "doc-status" because your checklist is currently global
+            loadChecklist("doc-status"); 
+
+        } else {
+            // No user logged in, kick them back to login
+            window.location.href = "/log-in.html";
+        }
+    });
+
+    // 2. LOGOUT LOGIC
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', async () => {
+            try {
+                await signOut(auth);
+                window.location.href = "/log-in.html";
+            } catch (error) {
+                console.error("Logout Error:", error);
+            }
+        });
+    }
+
+    // 3. CHECKLIST LOGIC (Moved into a function)
+    function loadChecklist(docId) {
+        const checklistDocRef = doc(db, "checklists", docId);
+        const kumuIDsOrder = ["PhilHealth", "Passport", "SSS", "Postal ID", "PAG-IBIG", "TIN"];
+        const kumuDocsOrder = ["Birth Certificate", "NBI Clearance"];
+
+        onSnapshot(checklistDocRef, (snapshot) => {
+            if (snapshot.exists()) {
+                const documents = snapshot.data().items;
+                checklistContainer.innerHTML = ''; 
+
+                const idsSection = document.createElement('div');
+                idsSection.className = "mb-10";
+                idsSection.innerHTML = `<h3 class="text-[14px] uppercase font-black text-on-surface-variant mb-4 px-2">KUMU IDs</h3>`;
+                const idsWrapper = document.createElement('div');
+                idsWrapper.className = "flex flex-col gap-3"; 
+                idsSection.appendChild(idsWrapper);
+
+                const docsSection = document.createElement('div');
+                docsSection.innerHTML = `<h3 class="text-[14px] uppercase font-black text-on-surface-variant mb-4 px-2">KUMU Docs</h3>`;
+                const docsWrapper = document.createElement('div');
+                docsWrapper.className = "flex flex-col gap-3";
+                docsSection.appendChild(docsWrapper);
+
+                const renderRow = (docName, wrapper) => {
+                    const currentStatus = documents[docName] || "PENDING";
+                    let colorClass = "text-on-surface-variant";
+                    let bgClass = "bg-surface-variant";
+                    let iconName = "pending_actions";
+                    
+                    if (currentStatus === "COMPLETED") { colorClass = "text-green-700"; bgClass = "bg-green-50"; iconName = "check_circle"; }
+                    else if (currentStatus === "IN PROGRESS") { colorClass = "text-amber-600"; bgClass = "bg-amber-50"; iconName = "hourglass_empty"; }
+                    else if (currentStatus === "PENDING") { colorClass = "text-red-600"; bgClass = "bg-red-50"; iconName = "error"; }
+
+                    const row = document.createElement('div');
+                    row.className = "flex items-center justify-between p-4 rounded-xl border border-surface-container bg-white shadow-sm";
+                    row.innerHTML = `
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center ${bgClass}">
+                                <span class="material-symbols-outlined ${colorClass}" style="font-variation-settings: 'FILL' 1;">${iconName}</span>
+                            </div>
+                            <span class="text-[16px] font-bold text-on-surface">${docName}</span>
+                        </div>
+                        <select class="text-[12px] font-bold uppercase outline-none rounded-lg py-2 px-3 border border-outline-variant ${colorClass}">
+                            <option value="PENDING" ${currentStatus === 'PENDING' ? 'selected' : ''}>PENDING</option>
+                            <option value="IN PROGRESS" ${currentStatus === 'IN PROGRESS' ? 'selected' : ''}>IN PROGRESS</option>
+                            <option value="COMPLETED" ${currentStatus === 'COMPLETED' ? 'selected' : ''}>COMPLETED</option>
+                        </select>
+                    `;
+
+                    row.querySelector('select').addEventListener('change', async (e) => {
+                        await updateDoc(checklistDocRef, { ['items.' + docName]: e.target.value });
+                    });
+                    wrapper.appendChild(row);
+                };
+
+                kumuIDsOrder.forEach(name => renderRow(name, idsWrapper));
+                kumuDocsOrder.forEach(name => renderRow(name, docsWrapper));
+                checklistContainer.appendChild(idsSection);
+                checklistContainer.appendChild(docsSection);
+            }
+        });
+    }
+</script>
+
+    
+</body>
+</html>

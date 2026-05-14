@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | KUMUDOCS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#9fcaff",
+                        "surface-container-low": "#f3f3fa",
+                        "inverse-on-surface": "#f0f0f7",
+                        "inverse-primary": "#abc7ff",
+                        "surface-variant": "#e2e2e8",
+                        "on-surface-variant": "#434751",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e2e2e8",
+                        "on-tertiary-fixed-variant": "#793105",
+                        "primary-fixed-dim": "#abc7ff",
+                        "outline-variant": "#c3c6d2",
+                        "surface-dim": "#d9d9e0",
+                        "surface-bright": "#f9f9ff",
+                        "secondary-fixed": "#d2e4ff",
+                        "on-primary-fixed": "#001b3f",
+                        "on-surface": "#1a1c20",
+                        "primary-container": "#004085",
+                        "tertiary": "#4f1c00",
+                        "on-tertiary-fixed": "#351000",
+                        "on-secondary-container": "#004172",
+                        "on-tertiary-container": "#f99463",
+                        "on-error-container": "#93000a",
+                        "surface": "#f9f9ff",
+                        "surface-tint": "#305ea4",
+                        "on-primary-container": "#84aefa",
+                        "outline": "#737782",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#ededf4",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e8e8ee",
+                        "on-background": "#1a1c20",
+                        "secondary": "#0061a5",
+                        "background": "#f9f9ff",
+                        "primary": "#002a5c",
+                        "tertiary-fixed-dim": "#ffb694",
+                        "secondary-container": "#66affe",
+                        "inverse-surface": "#2f3035",
+                        "tertiary-fixed": "#ffdbcc",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#00497e",
+                        "on-secondary-fixed": "#001d37",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#d7e3ff",
+                        "on-primary-fixed-variant": "#0c458b",
+                        "tertiary-container": "#722c01"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "margin-desktop": "48px",
+                        "margin-mobile": "16px",
+                        "container-max-width": "1200px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Public Sans"],
+                        "display-lg-mobile": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "headline-md": ["Public Sans"],
+                        "display-lg": ["Public Sans"],
+                        "title-sm": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "display-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "display-lg": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "title-sm": ["18px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>body {
+    font-family: "Public Sans", sans-serif
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    vertical-align: middle
+    }
+.watermark-bg {
+    background-image: linear-gradient(rgba(249, 249, 255, 0.96), rgba(249, 249, 255, 0.96)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuBIga_Bl7fpKrI9w9_V0kbC-0e3LpyDQc7IsrZQzSH1AwBOZ82TRepVk6SftctamBwnIJvBeVahT-DCiA9ktXXREKn6TJ1IU3IMF9Sa2D4fkI4p-QyYjVN19OPyuDTdYQnvYQqwDfWj7iNT-egtHGaBMYdWvl5nPYgZNf58LM-so8SCSBK6cXT4CFlVt6P5rxutfmvDwnxgJ0vY-t35WtfDrd5EmMQmwkWgJ-PZrzjW1f98dd0lK5BagF9yJvmXjR1wQ35CtNGxMf6Q);
+    background-size: cover;
+    background-attachment: fixed
+    }</style>
+</head>
+<body class="bg-background text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar Component -->
+<header class="bg-surface-container-lowest dark:bg-surface-container-lowest border-b border-outline-variant dark:border-outline-variant docked full-width top-0 z-50">
+    <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-width mx-auto">
+        
+        <!-- WRAPPED THE LOGO AND TITLE TOGETHER HERE -->
+        <div class="flex items-center gap-3">
+            <img src="/KUMUDOCS.png" alt="KUMUDOCS Logo" class="h-8 w-auto object-contain"/>
+            <div class="text-title-sm font-title-sm font-black text-primary dark:text-inverse-primary uppercase tracking-tighter">
+                KUMUDOCS
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE NAVIGATION LINKS -->
+        <div class="flex items-center gap-6">
+            <div class="hidden md:flex ml-8 items-center gap-8">
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="/header/user-profile.html">Profile</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="/header/help.html">Help</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors text-label-sm font-label-sm" href="/header/about.html">About</a>
+            </div>
+<button id="logout-btn" class="text-label-sm font-label-sm text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors flex items-center gap-1">
+    <span>Logout</span>
+</button>        </div>
+
+    </nav>
+</header>
+<main class="pb-16 watermark-bg min-h-screen pt-20"><div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop pt-8">
+<a class="inline-flex items-center gap-2 text-primary hover:text-secondary transition-colors text-label-sm font-label-sm" href="/home-page.html">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+        Back to Dashboard
+    </a>
+</div>
+<!-- Hero Section -->
+<section class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7">
+<span class="text-secondary font-bold text-label-sm uppercase tracking-widest mb-4 block">Institutional Reliability</span>
+<h1 class="text-display-lg font-display-lg text-primary mb-6">
+                        Empowering Filipinos with Digital Document Readiness.
+                    </h1>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-2xl mb-8">
+                        KUMUDOCS is a specialized platform designed to streamline the complex world of Philippine government identification and documentation. We bridge the gap between citizens and public agencies by providing a centralized, easy-to-navigate guide for every requirement.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-lg font-bold shadow-sm hover:opacity-90 transition-all" href="/home-page.html">
+                            Get Started
+</a>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="bg-white p-2 rounded-xl border border-outline-variant shadow-lg rotate-3 overflow-hidden">
+<img class="rounded-lg w-full h-[400px] object-cover" data-alt="A clean and professional mobile application interface displayed on a modern smartphone screen. The UI features a high-contrast navy and white color palette consistent with institutional branding. Icons representing government IDs like passports and driver's licenses are arranged in a structured grid layout. The atmosphere is bright and trust-inducing, emphasizing clarity and ease of use for document organization." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQR7thvet-F8XSmJbnB9Anihy6T0X5qbFiD6GYMv1X0nPa8Fshq9GjOmDyykxum_w6Ek4K-HQd8dYWvj7VOiV5QcUmQ9rTKATijHfHr28pW7o-9sfJ6VNPRrkmnI1sB9wGRA-I4R4VebYqHdMsIOAvWRM5EDcFpxMSkDmu_pAKeq3d4AQo3bUx_lkNEQSNT01WVjQafkz0yOOdk9Oj7r4HYatLGPSqXvUCS8LHpxtUVlHPWlpR5NwLYz6tG8XciF4R95dMgQsD2Si1"/>
+</div>
+<!-- Background Accent Octopus/Tech Motif -->
+<div class="absolute -bottom-10 -left-10 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[200px] text-primary">hub</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Vision Bento Grid -->
+<section class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Mission Card -->
+<div class="bg-white border border-outline-variant p-8 rounded-xl shadow-[0_4px_20px_-4px_rgba(0,64,133,0.08)] flex flex-col h-full">
+<div class="w-12 h-12 bg-primary-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">assignment_turned_in</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-4">Our Mission</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                        To simplify bureaucratic processes by providing accurate, up-to-date, and accessible information regarding government requirements for every Filipino.
+                    </p>
+</div>
+<!-- Vision Card -->
+<div class="bg-white border border-outline-variant p-8 rounded-xl shadow-[0_4px_20px_-4px_rgba(0,64,133,0.08)] flex flex-col h-full">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">visibility</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-4">Our Vision</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                        A nation where every citizen is digitally empowered and fully documented, reducing friction in public service delivery and personal growth.
+                    </p>
+</div>
+<!-- Trust Card -->
+<div class="bg-primary text-on-primary p-8 rounded-xl shadow-lg flex flex-col h-full justify-center relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-headline-md font-headline-md mb-4 text-on-primary-container">100% Reliable</h3>
+<p class="text-body-md font-body-md opacity-90">
+                            We cross-reference every guide with official agency mandates to ensure you never have to visit a government office twice.
+                        </p>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-[120px] opacity-10">verified_user</span>
+</div>
+</div>
+</section>
+<!-- Core Features / Vertical Flow -->
+<section class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-12 bg-surface-container-lowest rounded-3xl border border-outline-variant">
+<div class="text-center mb-16">
+<h2 class="text-display-lg font-display-lg text-primary mb-4">The KUMUDOCS Advantage</h2>
+<div class="h-1 w-24 bg-secondary mx-auto rounded-full"></div>
+</div>
+<div class="space-y-12">
+<!-- Feature 1 -->
+<div class="flex flex-col md:flex-row items-center gap-12 px-8">
+<div class="w-full md:w-1/2">
+<img class="rounded-xl shadow-md h-[300px] w-full object-cover" data-alt="A professional setting showing a stack of official Philippine government documents and application forms resting on a clean white desk. Beside the papers, there is a modern digital tablet displaying a checklist of requirements. The lighting is soft and natural, emphasizing an organized and efficient workspace. The color palette features whites, light grays, and deep navy blues, projecting a sense of bureaucratic order and modern digital integration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg3-wJj9xNgmNLJcZ9HuGs66njRfLBLhE8KYnpAuQo4WJYKbtzlCUXi9Cj9y9WfcsKGJ105RWwNwgEczktfT1TA-TmgLYeYxm5Lpld2q9Asi3Af0Lz0ClCcuMRo-BQoMnb9gXd0HFaZn0MfLz_XmiAhotLbJfrRZcTeV3jRLRdq7cFOhEj3q149hofJw8y4NWGQ08aQSst6FpC3in3gndyUMRo9i9GoF1w_LyFIcisp6KzK72SPaPJPHnF0yrqUhS9xtlTF3yPp6WT"/>
+</div>
+<div class="w-full md:w-1/2">
+<h4 class="text-title-sm font-title-sm text-secondary uppercase mb-2">Centralized Hub</h4>
+<h3 class="text-headline-md font-headline-md text-primary mb-4">Requirements &amp; Forms</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                            Forget browsing through multiple outdated websites. We provide a single source of truth for NBI Clearances, Passports, Driver’s Licenses, and more, including direct links to downloadable forms.
+                        </p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="flex flex-col md:flex-row-reverse items-center gap-12 px-8">
+<div class="w-full md:w-1/2">
+<img class="rounded-xl shadow-md h-[300px] w-full object-cover" data-alt="A digital composite image representing cloud-based document management for a government application. It shows abstract blue network lines and data nodes connecting various official icons like badges, envelopes, and person avatars. The style is futuristic yet grounded in corporate modernism, using a sophisticated primary navy and light blue color scheme. The composition is clean, with ample whitespace to represent data organization and security." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcaH2wsmxnuh1XbbzF2oWznnqO7IXXTcz4Jb129TXe_AtuMoiTWb4OTnjeQY_UrC46_5vdCmR560K4k6rKSi9eHm0pzO1fM_aVM9MTdusa6dl--8BYe_TQRfn55TbW7HVmTZ6gYCr-xbo4YT8FZiqDpL-z9p_LVH4J-RVd2R-dJlTF8-B7MSMDqPKEjXaN7i4l2uxaNWzCSjj_nzf2rGmrRhf13HeGfzpCG-GMT7C-X1b5-cpRTnv940YiR055wYdUEZYwEHYmCmbs"/>
+</div>
+<div class="w-full md:w-1/2">
+<h4 class="text-title-sm font-title-sm text-secondary uppercase mb-2">Official Connections</h4>
+<h3 class="text-headline-md font-headline-md text-primary mb-4">Direct Portal Access</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                            We provide verified gateways to official government booking sites, ensuring your data is handled only by authorized agencies while we guide you through the preparation process.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Institutional Trust Banner -->
+<section class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<div class="bg-primary-container p-12 rounded-xl text-center relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="text-display-lg font-display-lg text-on-primary-container mb-6 italic">"Your bridge to a documented future."</h2>
+<p class="text-on-primary-container font-medium max-w-xl mx-auto opacity-80">
+                        KUMUDOCS is an independent application and is not directly affiliated with any government agency, but serves as a trusted aggregator of official public information.
+                    </p>
+</div>
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-[150px]">gavel</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-[1200px] mx-auto">
+<div class="mb-4 md:mb-0 text-center md:text-left">
+<div class="text-label-sm font-label-sm font-bold text-primary mb-2">KUMUDOCS</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant max-w-xs">© 2024 KUMUDOCS. All government trademarks belong to their respective agencies.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-label-sm font-label-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-label-sm font-label-sm" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+
+<script type="module">
+    // 1. Add 'signOut' to your existing auth imports
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+    // 2. Your existing config
+    const firebaseConfig = {
+        apiKey: "AIzaSyBGUmZNzSpDM7VgpXS8g78yJ_O10sGvklQ",
+        authDomain: "kumudocs.firebaseapp.com",
+        projectId: "kumudocs",
+        storageBucket: "kumudocs.firebasestorage.app",
+        messagingSenderId: "652105060147",
+        appId: "1:652105060147:web:715f7ec2a3760aad9fb846"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // 3. PASTE THE LOGOUT LOGIC HERE
+    const logoutBtn = document.getElementById('logout-btn');
+
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', async () => {
+            try {
+                await signOut(auth);
+                // After logging out, send them back to the login page
+                window.location.href = "/log-in.html"; 
+            } catch (error) {
+                console.error("Logout Error:", error);
+                alert("Failed to log out.");
+            }
+        });
+    }
+</script>
+
+
+</body></html>
