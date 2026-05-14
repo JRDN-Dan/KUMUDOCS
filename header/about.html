@@ -115,7 +115,7 @@
         
         <!-- WRAPPED THE LOGO AND TITLE TOGETHER HERE -->
         <div class="flex items-center gap-3">
-            <img src="./KUMUDOCS.png" alt="KUMUDOCS Logo" class="h-8 w-auto object-contain"/>
+            <img src="../KUMUDOCS.png" alt="KUMUDOCS Logo" class="h-8 w-auto object-contain"/>
             <div class="text-title-sm font-title-sm font-black text-primary dark:text-inverse-primary uppercase tracking-tighter">
                 KUMUDOCS
             </div>
@@ -293,7 +293,7 @@
             try {
                 await signOut(auth);
                 // After logging out, send them back to the login page
-                window.location.href = "./log-in.html"; 
+                window.location.href = "../log-in.html"; 
             } catch (error) {
                 console.error("Logout Error:", error);
                 alert("Failed to log out.");
