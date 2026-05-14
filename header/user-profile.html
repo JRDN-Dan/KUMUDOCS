@@ -76,17 +76,14 @@
 </head>
 <body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
 
-<!-- TopAppBar -->
 <header class="bg-surface-container-lowest border-b border-outline-variant sticky w-full top-0 z-50">
     <nav class="flex justify-between items-center w-full px-4 md:px-12 py-4 mx-auto">
-        
         <div class="flex items-center gap-3">
             <img src="../KUMUDOCS.png" alt="KUMUDOCS Logo" class="h-8 w-auto object-contain"/>
             <div class="text-[18px] font-black text-primary dark:text-inverse-primary uppercase tracking-tighter">
                 KUMUDOCS
             </div>
         </div>
-
         <div class="flex items-center gap-6">
             <div class="hidden md:flex ml-8 items-center gap-8">
                 <a class="text-[14px] text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors" href="./user-profile.html">Profile</a>
@@ -97,93 +94,87 @@
                 <span>Logout</span>
             </button>
         </div>
-
     </nav>
 </header>
-    <main class="flex-grow max-w-[1200px] mx-auto w-full px-4 md:px-12 py-8 md:grid md:grid-cols-12 md:gap-6">
-        
-        <!-- Side Navigation (Web) -->
-        <aside class="hidden md:block md:col-span-3">
-            <nav class="flex flex-col gap-2">
-                <a class="flex items-center gap-3 p-4 bg-primary-container text-on-primary-container rounded-lg font-bold" href="#">
-                    <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
-                    <span class="text-[14px]">Profile</span>
-                </a>
-            </nav>
-        </aside>
 
-        <!-- Profile Content -->
-        <section class="md:col-span-9 flex flex-col gap-8">
-            <a class="flex items-center gap-2 text-primary hover:text-secondary transition-colors mb-2 group w-fit" href="../home-page.html">
-                <span class="material-symbols-outlined text-[20px] group-hover:-translate-x-1 transition-transform" data-icon="arrow_back">arrow_back</span>
-                <span class="text-[14px] font-bold uppercase tracking-wide">Back to Dashboard</span>
+<main class="flex-grow max-w-[1200px] mx-auto w-full px-4 md:px-12 py-8 md:grid md:grid-cols-12 md:gap-6">
+    
+    <aside class="hidden md:block md:col-span-3">
+        <nav class="flex flex-col gap-2">
+            <a class="flex items-center gap-3 p-4 bg-primary-container text-on-primary-container rounded-lg font-bold" href="#">
+                <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+                <span class="text-[14px]">Profile</span>
             </a>
+        </nav>
+    </aside>
 
-            <!-- USER HEADER CARD WITH EDIT LOGIC IDs -->
-            <div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant shadow-[0_4px_20px_-4px_rgba(0,64,133,0.08)] flex flex-col md:flex-row items-center gap-8">
+    <section class="md:col-span-9 flex flex-col gap-8">
+        <a class="flex items-center gap-2 text-primary hover:text-secondary transition-colors mb-2 group w-fit" href="../home-page.html">
+            <span class="material-symbols-outlined text-[20px] group-hover:-translate-x-1 transition-transform" data-icon="arrow_back">arrow_back</span>
+            <span class="text-[14px] font-bold uppercase tracking-wide">Back to Dashboard</span>
+        </a>
+
+        <div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant shadow-[0_4px_20px_-4px_rgba(0,64,133,0.08)] flex flex-col md:flex-row items-center gap-8">
+            
+            <div class="relative group" id="profile-img-container">
+                <img id="profile-img" alt="Profile" class="w-32 h-32 rounded-full object-cover border-4 border-surface-container" src="../KUMUDOCS.png"/>
+                <div id="img-edit-overlay" class="absolute inset-0 flex items-center justify-center bg-black/50 rounded-full opacity-0 pointer-events-none transition-opacity cursor-pointer">
+                    <span class="text-white text-xs font-bold text-center">Click to<br>Change</span>
+                </div>
+                <input type="file" id="file-input" class="hidden" accept="image/*" />
+                <div id="status-badge" class="absolute bottom-1 right-1 bg-primary p-2 rounded-full border-4 border-surface-container-lowest"></div>
+            </div>
+
+            <div class="text-center md:text-left flex-grow">
+                <h1 id="display-name" class="text-[28px] md:text-[36px] font-bold text-primary animate-pulse">Loading...</h1>
+                <input type="text" id="edit-name-input" class="hidden text-[28px] md:text-[36px] font-bold text-primary border-b-2 border-primary focus:outline-none bg-transparent w-full md:w-auto" value="">
+                <p id="display-email" class="text-[16px] text-on-surface-variant mt-1">...</p>
+            </div>
+
+            <div>
+                <div id="view-actions">
+                    <button id="edit-profile-btn" class="px-6 py-2 bg-primary text-white rounded-lg font-bold hover:opacity-90 transition-all text-[14px]">Edit Profile</button>
+                </div>
+                <div id="edit-actions" class="hidden flex flex-col sm:flex-row gap-2">
+                    <button id="cancel-btn" class="px-4 py-2 bg-surface-container text-on-surface rounded-lg font-bold hover:bg-surface-variant transition-all text-[14px]">Cancel</button>
+                    <button id="save-btn" class="px-4 py-2 bg-primary text-white rounded-lg font-bold hover:opacity-90 transition-all text-[14px] min-w-[100px]">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full">
+            <div class="bg-surface-container-lowest p-6 md:p-10 rounded-xl border border-outline-variant shadow-[0_4px_20px_-4px_rgba(0,64,133,0.08)]">
+                <div class="flex justify-between items-center mb-8 border-b border-surface-container pb-4">
+                    <h2 class="text-[24px] font-bold text-primary">Document Status</h2>
+                    <span class="material-symbols-outlined text-primary text-3xl" data-icon="fact_check">fact_check</span>
+                </div>
                 
-                <div class="relative group" id="profile-img-container">
-                    <img id="profile-img" alt="Profile" class="w-32 h-32 rounded-full object-cover border-4 border-surface-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgE0LNdlj8pjLl7JrZJKaSdEf33J4B9QPQbRTXJ24rSJIYvxNAzv5dGlhdZipGXNFwVONdRJig7qDqTDkWu6nH8RCQ759ixT3ewXZnEiITqqihtGXg6OoYsOGkt9iCazni6q9sDWg_2qCXYgJm1wAbEqmbrnhzTH85OkQFU6731PN-B7wmy8V7da5sSoGc61zCc2yrWS88t5p8kom8bvVlPVJLmv_vPYkUkYvTAREomWR4eh_5Lr9H-zud1VtJmloZGB0LoKnyp00_"/>
-                    <div id="img-edit-overlay" class="absolute inset-0 flex items-center justify-center bg-black/50 rounded-full opacity-0 pointer-events-none transition-opacity cursor-pointer">
-                        <span class="text-white text-xs font-bold text-center">Click to<br>Change</span>
-                    </div>
-                    <input type="file" id="file-input" class="hidden" accept="image/*" />
-                    <div id="status-badge" class="absolute bottom-1 right-1 bg-primary p-2 rounded-full border-4 border-surface-container-lowest"></div>
-                </div>
-
-                <div class="text-center md:text-left flex-grow">
-                    <h1 id="display-name" class="text-[28px] md:text-[36px] font-bold text-primary">Juan Dela Cruz</h1>
-                    <input type="text" id="edit-name-input" class="hidden text-[28px] md:text-[36px] font-bold text-primary border-b-2 border-primary focus:outline-none bg-transparent w-full md:w-auto" value="Juan Dela Cruz">
-                    <p class="text-[16px] text-on-surface-variant mt-1">juan.delacruz@email.ph</p>
-                </div>
-
-                <div>
-                    <div id="view-actions">
-                        <button id="edit-profile-btn" class="px-6 py-2 bg-primary text-white rounded-lg font-bold hover:opacity-90 transition-all text-[14px]">Edit Profile</button>
-                    </div>
-                    <div id="edit-actions" class="hidden flex flex-col sm:flex-row gap-2">
-                        <button id="cancel-btn" class="px-4 py-2 bg-surface-container text-on-surface rounded-lg font-bold hover:bg-surface-variant transition-all text-[14px]">Cancel</button>
-                        <button id="save-btn" class="px-4 py-2 bg-primary text-white rounded-lg font-bold hover:opacity-90 transition-all text-[14px] min-w-[100px]">Save</button>
-                    </div>
+                <div id="checklist-container">
+                    <p class="text-sm text-on-surface-variant animate-pulse">Loading documents...</p>
                 </div>
             </div>
+        </div>
 
-            <!-- CHECKLIST CONTAINER (Centered and Wide) -->
-            <div class="w-full">
-                <div class="bg-surface-container-lowest p-6 md:p-10 rounded-xl border border-outline-variant shadow-[0_4px_20px_-4px_rgba(0,64,133,0.08)]">
-                    <div class="flex justify-between items-center mb-8 border-b border-surface-container pb-4">
-                        <h2 class="text-[24px] font-bold text-primary">Document Status</h2>
-                        <span class="material-symbols-outlined text-primary text-3xl" data-icon="fact_check">fact_check</span>
-                    </div>
-                    
-                    <!-- EMPTY CONTAINER FOR JAVASCRIPT CHECKLIST -->
-                    <div id="checklist-container">
-                        <p class="text-sm text-on-surface-variant animate-pulse">Loading documents...</p>
-                    </div>
-                </div>
-            </div>
+    </section>
+</main>
 
-        </section>
-    </main>
-
-<!-- Footer -->
 <footer class="bg-surface-container border-t border-outline-variant">
-<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-[1200px] mx-auto">
-<div class="mb-4 md:mb-0 text-center md:text-left">
-<div class="text-label-sm font-label-sm font-bold text-primary mb-2">KUMUDOCS</div>
-<p class="text-label-sm font-label-sm text-on-surface-variant max-w-xs">© 2024 KUMUDOCS. All government trademarks belong to their respective agencies.</p>
-</div>
-<div class="flex gap-6">
-<a class="text-on-surface-variant hover:text-primary underline transition-all text-label-sm font-label-sm" href="#">Privacy Policy</a>
-<a class="text-on-surface-variant hover:text-primary underline transition-all text-label-sm font-label-sm" href="#">Terms of Service</a>
-</div>
-</div>
+    <div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-[1200px] mx-auto">
+        <div class="mb-4 md:mb-0 text-center md:text-left">
+            <div class="text-label-sm font-label-sm font-bold text-primary mb-2">KUMUDOCS</div>
+            <p class="text-label-sm font-label-sm text-on-surface-variant max-w-xs">© 2024 KUMUDOCS. All government trademarks belong to their respective agencies.</p>
+        </div>
+        <div class="flex gap-6">
+            <a class="text-on-surface-variant hover:text-primary underline transition-all text-label-sm font-label-sm" href="#">Privacy Policy</a>
+            <a class="text-on-surface-variant hover:text-primary underline transition-all text-label-sm font-label-sm" href="#">Terms of Service</a>
+        </div>
+    </div>
 </footer>
-</body></html>
 
 <script type="module">
+    // Make sure to include 'setDoc' in the Firestore imports
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-    import { getFirestore, doc, updateDoc, getDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+    import { getFirestore, doc, updateDoc, getDoc, onSnapshot, setDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
     import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js";
     import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
@@ -201,40 +192,160 @@
     const storage = getStorage(app);
     const auth = getAuth(app);
 
-    // DOM Elements
+    // DOM Elements - Profile Display
     const displayName = document.getElementById('display-name');
-    const displayEmail = document.querySelector('p.text-on-surface-variant'); // Targets the email <p> tag
+    const displayEmail = document.getElementById('display-email');
     const profileImg = document.getElementById('profile-img');
     const logoutBtn = document.getElementById('logout-btn');
     const checklistContainer = document.getElementById('checklist-container');
 
-    // 1. AUTH WATCHER: This runs as soon as the page loads
+    // DOM Elements - Profile Edit
+    const editProfileBtn = document.getElementById('edit-profile-btn');
+    const cancelBtn = document.getElementById('cancel-btn');
+    const saveBtn = document.getElementById('save-btn');
+    const viewActions = document.getElementById('view-actions');
+    const editActions = document.getElementById('edit-actions');
+    const editNameInput = document.getElementById('edit-name-input');
+    const imgOverlay = document.getElementById('img-edit-overlay');
+    const fileInput = document.getElementById('file-input');
+    const statusBadge = document.getElementById('status-badge');
+
+    // Global State for current user session
+    let currentUserUid = null;
+    let originalName = "";
+    let originalImgSrc = "https://lh3.googleusercontent.com/aida-public/AB6AXuBgE0LNdlj8pjLl7JrZJKaSdEf33J4B9QPQbRTXJ24rSJIYvxNAzv5dGlhdZipGXNFwVONdRJig7qDqTDkWu6nH8RCQ759ixT3ewXZnEiITqqihtGXg6OoYsOGkt9iCazni6q9sDWg_2qCXYgJm1wAbEqmbrnhzTH85OkQFU6731PN-B7wmy8V7da5sSoGc61zCc2yrWS88t5p8kom8bvVlPVJLmv_vPYkUkYvTAREomWR4eh_5Lr9H-zud1VtJmloZGB0LoKnyp00_";
+    let newImageFile = null;
+
+    // 1. AUTH WATCHER: Runs as soon as the page loads
     onAuthStateChanged(auth, async (user) => {
         if (user) {
             console.log("Logged in as:", user.uid);
+            currentUserUid = user.uid; // Save for the editing function
             
             // A. Fetch User Profile Data from Firestore
-            const userDocRef = doc(db, "users", user.uid);
+            const userDocRef = doc(db, "users", currentUserUid);
             const userSnap = await getDoc(userDocRef);
 
             if (userSnap.exists()) {
                 const userData = userSnap.data();
-                displayName.innerText = userData.name;
-                displayEmail.innerText = userData.email;
-                if (userData.photoURL) profileImg.src = userData.photoURL;
+                
+                // Set UI texts and store original states for the cancel button
+                const fetchedName = userData.name || "No Name Set";
+                displayName.innerText = fetchedName;
+                editNameInput.value = fetchedName;
+                originalName = fetchedName;
+
+                if (userData.email) {
+                    displayEmail.innerText = userData.email;
+                } else if (user.email) {
+                    displayEmail.innerText = user.email; // Fallback to Auth email
+                }
+
+                if (userData.photoURL) {
+                    profileImg.src = userData.photoURL;
+                    originalImgSrc = userData.photoURL;
+                }
+            } else {
+                displayName.innerText = "No Profile Found";
+                if (user.email) displayEmail.innerText = user.email;
             }
 
-            // B. Load the Checklist for this specific user
-            // Note: We use "doc-status" because your checklist is currently global
-            loadChecklist("doc-status"); 
+            // B. Load the Checklist FOR THIS SPECIFIC USER
+            loadChecklist(currentUserUid); 
 
         } else {
-            // No user logged in, kick them back to login
+            // Kick to login if not authenticated
             window.location.href = "../log-in.html";
         }
     });
 
-    // 2. LOGOUT LOGIC
+    // 2. PROFILE EDIT LOGIC
+    function setEditMode(isEditing) {
+        if (isEditing) {
+            viewActions.classList.add('hidden');
+            editActions.classList.remove('hidden');
+            displayName.classList.add('hidden');
+            editNameInput.classList.remove('hidden');
+            imgOverlay.classList.remove('opacity-0');
+            imgOverlay.classList.add('opacity-100', 'pointer-events-auto');
+            statusBadge.classList.add('hidden');
+        } else {
+            viewActions.classList.remove('hidden');
+            editActions.classList.add('hidden');
+            displayName.classList.remove('hidden');
+            editNameInput.classList.add('hidden');
+            imgOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+            imgOverlay.classList.add('opacity-0');
+            statusBadge.classList.remove('hidden');
+            fileInput.value = ""; 
+            newImageFile = null;
+        }
+    }
+
+    editProfileBtn.addEventListener('click', () => {
+        setEditMode(true);
+    });
+
+    cancelBtn.addEventListener('click', () => {
+        editNameInput.value = originalName;
+        profileImg.src = originalImgSrc;
+        setEditMode(false);
+    });
+
+    imgOverlay.addEventListener('click', () => fileInput.click());
+
+    fileInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            newImageFile = file;
+            profileImg.src = URL.createObjectURL(file); // Instant preview
+        }
+    });
+
+    saveBtn.addEventListener('click', async () => {
+        if (!currentUserUid) return;
+        
+        const newName = editNameInput.value.trim();
+        if (!newName) return alert("Name cannot be empty");
+
+        const originalBtnText = saveBtn.innerText;
+        saveBtn.innerText = "Saving...";
+        saveBtn.disabled = true;
+        cancelBtn.disabled = true;
+
+        try {
+            let photoURL = originalImgSrc; 
+
+            // Upload Image if changed
+            if (newImageFile) {
+                const storageRef = ref(storage, `profileImages/${currentUserUid}/${newImageFile.name}`);
+                const snapshot = await uploadBytes(storageRef, newImageFile);
+                photoURL = await getDownloadURL(snapshot.ref);
+            }
+
+            // Save to Firestore (Use setDoc with merge in case the user doc doesn't exist yet)
+            const userDocRef = doc(db, 'users', currentUserUid);
+            await setDoc(userDocRef, { name: newName, photoURL: photoURL }, { merge: true });
+
+            // Update UI & Internal State
+            displayName.innerText = newName;
+            originalName = newName;
+            originalImgSrc = photoURL;
+            profileImg.src = photoURL;
+            
+            setEditMode(false);
+
+        } catch (error) {
+            console.error("Error saving profile:", error);
+            alert("Failed to update profile. Make sure your Firestore Security Rules allow writes.");
+        } finally {
+            saveBtn.innerText = originalBtnText;
+            saveBtn.disabled = false;
+            cancelBtn.disabled = false;
+        }
+    });
+
+    // 3. LOGOUT LOGIC
     if (logoutBtn) {
         logoutBtn.addEventListener('click', async () => {
             try {
@@ -246,71 +357,74 @@
         });
     }
 
-    // 3. CHECKLIST LOGIC (Moved into a function)
-    function loadChecklist(docId) {
-        const checklistDocRef = doc(db, "checklists", docId);
+    // 4. CHECKLIST LOGIC
+    function loadChecklist(uid) {
+        // Point to a document named after the user's unique ID
+        const checklistDocRef = doc(db, "checklists", uid);
         const kumuIDsOrder = ["PhilHealth", "Passport", "SSS", "Postal ID", "PAG-IBIG", "TIN"];
         const kumuDocsOrder = ["Birth Certificate", "NBI Clearance"];
 
         onSnapshot(checklistDocRef, (snapshot) => {
-            if (snapshot.exists()) {
-                const documents = snapshot.data().items;
-                checklistContainer.innerHTML = ''; 
+            // If the document exists, grab the items. If it's a new account, use an empty object {}
+            const documents = snapshot.exists() ? (snapshot.data().items || {}) : {};
+            
+            checklistContainer.innerHTML = ''; 
 
-                const idsSection = document.createElement('div');
-                idsSection.className = "mb-10";
-                idsSection.innerHTML = `<h3 class="text-[14px] uppercase font-black text-on-surface-variant mb-4 px-2">KUMU IDs</h3>`;
-                const idsWrapper = document.createElement('div');
-                idsWrapper.className = "flex flex-col gap-3"; 
-                idsSection.appendChild(idsWrapper);
+            const idsSection = document.createElement('div');
+            idsSection.className = "mb-10";
+            idsSection.innerHTML = `<h3 class="text-[14px] uppercase font-black text-on-surface-variant mb-4 px-2">KUMU IDs</h3>`;
+            const idsWrapper = document.createElement('div');
+            idsWrapper.className = "flex flex-col gap-3"; 
+            idsSection.appendChild(idsWrapper);
 
-                const docsSection = document.createElement('div');
-                docsSection.innerHTML = `<h3 class="text-[14px] uppercase font-black text-on-surface-variant mb-4 px-2">KUMU Docs</h3>`;
-                const docsWrapper = document.createElement('div');
-                docsWrapper.className = "flex flex-col gap-3";
-                docsSection.appendChild(docsWrapper);
+            const docsSection = document.createElement('div');
+            docsSection.innerHTML = `<h3 class="text-[14px] uppercase font-black text-on-surface-variant mb-4 px-2">KUMU Docs</h3>`;
+            const docsWrapper = document.createElement('div');
+            docsWrapper.className = "flex flex-col gap-3";
+            docsSection.appendChild(docsWrapper);
 
-                const renderRow = (docName, wrapper) => {
-                    const currentStatus = documents[docName] || "PENDING";
-                    let colorClass = "text-on-surface-variant";
-                    let bgClass = "bg-surface-variant";
-                    let iconName = "pending_actions";
-                    
-                    if (currentStatus === "COMPLETED") { colorClass = "text-green-700"; bgClass = "bg-green-50"; iconName = "check_circle"; }
-                    else if (currentStatus === "IN PROGRESS") { colorClass = "text-amber-600"; bgClass = "bg-amber-50"; iconName = "hourglass_empty"; }
-                    else if (currentStatus === "PENDING") { colorClass = "text-red-600"; bgClass = "bg-red-50"; iconName = "error"; }
+            const renderRow = (docName, wrapper) => {
+                // This is where it defaults to PENDING for new accounts!
+                const currentStatus = documents[docName] || "PENDING";
+                let colorClass = "text-on-surface-variant";
+                let bgClass = "bg-surface-variant";
+                let iconName = "pending_actions";
+                
+                if (currentStatus === "COMPLETED") { colorClass = "text-green-700"; bgClass = "bg-green-50"; iconName = "check_circle"; }
+                else if (currentStatus === "IN PROGRESS") { colorClass = "text-amber-600"; bgClass = "bg-amber-50"; iconName = "hourglass_empty"; }
+                else if (currentStatus === "PENDING") { colorClass = "text-red-600"; bgClass = "bg-red-50"; iconName = "error"; }
 
-                    const row = document.createElement('div');
-                    row.className = "flex items-center justify-between p-4 rounded-xl border border-surface-container bg-white shadow-sm";
-                    row.innerHTML = `
-                        <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-full flex items-center justify-center ${bgClass}">
-                                <span class="material-symbols-outlined ${colorClass}" style="font-variation-settings: 'FILL' 1;">${iconName}</span>
-                            </div>
-                            <span class="text-[16px] font-bold text-on-surface">${docName}</span>
+                const row = document.createElement('div');
+                row.className = "flex items-center justify-between p-4 rounded-xl border border-surface-container bg-white shadow-sm";
+                row.innerHTML = `
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center ${bgClass}">
+                            <span class="material-symbols-outlined ${colorClass}" style="font-variation-settings: 'FILL' 1;">${iconName}</span>
                         </div>
-                        <select class="text-[12px] font-bold uppercase outline-none rounded-lg py-2 px-3 border border-outline-variant ${colorClass}">
-                            <option value="PENDING" ${currentStatus === 'PENDING' ? 'selected' : ''}>PENDING</option>
-                            <option value="IN PROGRESS" ${currentStatus === 'IN PROGRESS' ? 'selected' : ''}>IN PROGRESS</option>
-                            <option value="COMPLETED" ${currentStatus === 'COMPLETED' ? 'selected' : ''}>COMPLETED</option>
-                        </select>
-                    `;
+                        <span class="text-[16px] font-bold text-on-surface">${docName}</span>
+                    </div>
+                    <select class="text-[12px] font-bold uppercase outline-none rounded-lg py-2 px-3 border border-outline-variant ${colorClass}">
+                        <option value="PENDING" ${currentStatus === 'PENDING' ? 'selected' : ''}>PENDING</option>
+                        <option value="IN PROGRESS" ${currentStatus === 'IN PROGRESS' ? 'selected' : ''}>IN PROGRESS</option>
+                        <option value="COMPLETED" ${currentStatus === 'COMPLETED' ? 'selected' : ''}>COMPLETED</option>
+                    </select>
+                `;
 
-                    row.querySelector('select').addEventListener('change', async (e) => {
-                        await updateDoc(checklistDocRef, { ['items.' + docName]: e.target.value });
-                    });
-                    wrapper.appendChild(row);
-                };
+                row.querySelector('select').addEventListener('change', async (e) => {
+                    // We use setDoc with { merge: true } so it creates the document if it's their very first time saving!
+                    await setDoc(checklistDocRef, { 
+                        items: { [docName]: e.target.value } 
+                    }, { merge: true });
+                });
+                wrapper.appendChild(row);
+            };
 
-                kumuIDsOrder.forEach(name => renderRow(name, idsWrapper));
-                kumuDocsOrder.forEach(name => renderRow(name, docsWrapper));
-                checklistContainer.appendChild(idsSection);
-                checklistContainer.appendChild(docsSection);
-            }
+            kumuIDsOrder.forEach(name => renderRow(name, idsWrapper));
+            kumuDocsOrder.forEach(name => renderRow(name, docsWrapper));
+            checklistContainer.appendChild(idsSection);
+            checklistContainer.appendChild(docsSection);
         });
     }
 </script>
-
-    
 </body>
 </html>
