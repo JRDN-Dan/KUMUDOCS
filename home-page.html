@@ -218,7 +218,7 @@
             logoutBtn.addEventListener('click', async () => {
                 try {
                     await signOut(auth);
-                    window.location.href = "/log-in.html"; 
+                    window.location.href = "./log-in.html"; 
                 } catch (error) {
                     console.error("Logout Error:", error);
                     alert("Failed to log out.");
