@@ -188,7 +188,7 @@
                 // Log user in
                 await signInWithEmailAndPassword(auth, email, password);
                 // Redirect on success
-                window.location.href = "/home-page.html";
+                window.location.href = "./home-page.html";
             } catch (error) {
                 console.error("Login Error:", error);
                 alert("Login failed: " + error.message);
