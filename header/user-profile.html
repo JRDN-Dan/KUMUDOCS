@@ -76,26 +76,29 @@
 </head>
 <body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
 
-<header class="bg-surface-container-lowest border-b border-outline-variant sticky w-full top-0 z-50">
-    <nav class="flex justify-between items-center w-full px-4 md:px-12 py-4 mx-auto">
-        <div class="flex items-center gap-3">
-            <img src="../KUMUDOCS.png" alt="KUMUDOCS Logo" class="h-8 w-auto object-contain"/>
-            <div class="text-[18px] font-black text-primary dark:text-inverse-primary uppercase tracking-tighter">
-                KUMUDOCS
+<header class="bg-surface-container-lowest border-b border-outline-variant sticky top-0 z-50">
+        <nav class="flex flex-wrap justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-width mx-auto gap-y-3">
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <img src="./KUMUDOCS.png" alt="KUMUDOCS Logo" class="h-8 w-auto object-contain"/>
+                    <span class="text-title-sm font-title-sm font-black text-primary uppercase tracking-tighter">KUMUDOCS</span>
+                </div>
+                <div class="hidden md:flex ml-8 items-center gap-2">
+                    <span class="text-body-md font-body-md text-on-surface-variant">Hello,</span>
+                    <span id="user-greeting-desktop" class="text-body-md font-bold text-primary">User!</span>
+                </div>
             </div>
-        </div>
-        <div class="flex items-center gap-6">
-            <div class="hidden md:flex ml-8 items-center gap-8">
-                <a class="text-[14px] text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors" href="./user-profile.html">Profile</a>
-                <a class="text-[14px] text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors" href="./help.html">Help</a>
-                <a class="text-[14px] text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors" href="./about.html">About</a>
+            
+            <div class="flex flex-wrap items-center gap-4 md:gap-6 justify-end">
+                <a class="text-label-sm font-label-sm text-on-surface-variant font-medium hover:text-secondary transition-colors" href="./header/user-profile.html">Profile</a>
+                <a class="text-label-sm font-label-sm text-on-surface-variant font-medium hover:text-secondary transition-colors" href="./header/help.html">Help</a>
+                <a class="text-label-sm font-label-sm text-on-surface-variant font-medium hover:text-secondary transition-colors" href="./header/about.html">About</a>
+                <button id="logout-btn" class="text-label-sm font-label-sm text-on-surface-variant font-medium hover:text-secondary transition-colors flex items-center gap-1">
+                    <span>Logout</span>
+                </button>
             </div>
-            <button id="logout-btn" class="text-[14px] text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-container transition-colors flex items-center gap-1">
-                <span>Logout</span>
-            </button>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
 <main class="flex-grow max-w-[1200px] mx-auto w-full px-4 md:px-12 py-8 md:grid md:grid-cols-12 md:gap-6">
     
